@@ -67,7 +67,7 @@ export default function HeroSection() {
             <p className="text-xl md:text-2xl text-slate-600 max-w-3xl mx-auto leading-relaxed">
               Transforming from <span className="font-semibold text-blue-600">Occupational Health & Safety</span> 
               {" "}to cutting-edge <span className="font-semibold text-indigo-600">Software Development</span>
-              {" "}— bringing precision, safety-first thinking, and innovation to every line of code.
+              {" "}— bringing precision and innovation to every line of code.
             </p>
           </motion.div>
 
@@ -77,13 +77,15 @@ export default function HeroSection() {
             transition={{ duration: 0.8, delay: 0.6 }}
             className="flex flex-col sm:flex-row gap-4 justify-center mb-12"
           >
-            <Button 
+            <a href="/Chikwado-Valentine-Ani.pdf" download >
+                <Button 
               size="lg" 
               className="bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-700 hover:to-indigo-700 text-white px-8 py-3 text-lg shadow-lg hover:shadow-xl transition-all duration-300"
-            >
+                >
               <Download className="w-5 h-5 mr-2" />
               Download Resume
-            </Button>
+                </Button>
+            </a>
             <Button 
               size="lg" 
               variant="outline" 
