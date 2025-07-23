@@ -31,8 +31,8 @@ export default function ContactSection() {
     {
       icon: Mail,
       label: "Email",
-      value: "chikwado.ani@example.com",
-      href: "mailto:chikwado.ani@example.com"
+      value: "chikwadovalentine2@gmail.com",
+      href: "chikwadovalentine2@gmail.com"
     },
     {
       icon: MapPin,
@@ -43,8 +43,8 @@ export default function ContactSection() {
     {
       icon: Phone,
       label: "Phone",
-      value: "+1 (555) 123-4567",
-      href: "tel:+15551234567"
+      value: "+447501119439",
+      href: "tel:+447501119439"
     }
   ];
 
