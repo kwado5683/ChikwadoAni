@@ -1,5 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
+import Image from 'next/image';
+import kwado from "@/../public/kwado.jpeg";
 import { 
   Github, 
   Linkedin, 
@@ -17,7 +19,7 @@ export default function HeroSection() {
   };
 
   return (
-    <section id="hero" className="min-h-screen flex items-center justify-center relative overflow-hidden bg-gradient-to-br from-slate-50 via-white to-blue-50">
+    <section id="hero" className="min-h-screen flex items-center justify-center relative overflow-hidden bg-gradient-to-br from-slate-100 via-purple to-blue-100">
       <div className="absolute inset-0 bg-grid-slate-100 opacity-20 -z-10" />
       
       <div className="container mx-auto px-6 py-20 relative z-10">
@@ -28,8 +30,25 @@ export default function HeroSection() {
             transition={{ duration: 0.6, ease: "easeOut" }}
             className="mb-8"
           >
-            <div className="w-32 h-32 mx-auto rounded-full bg-gradient-to-br from-blue-600 to-indigo-700 flex items-center justify-center text-white text-4xl font-bold shadow-2xl">
-              CA
+            <div className="mx-auto flex items-center justify-center w-48 h-48 rounded-full overflow-hidden shadow-2xl">
+                <motion.div
+                    animate={{
+                    scale: [1, 1.05, 1],
+                    }}
+                    transition={{
+                    duration: 3,
+                    repeat: Infinity,
+                    ease: 'easeInOut',
+                    }}
+            >
+                <Image 
+                    src={kwado} 
+                    alt="Kwado" 
+                    width={192} 
+                    height={192} 
+                    className="object-cover w-full h-full" 
+                />
+            </motion.div>
             </div>
           </motion.div>
 

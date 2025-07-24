@@ -22,7 +22,7 @@ export default function AboutSection() {
     {
       icon: Code2,
       title: "Transformation",
-      description: "Made the bold transition to software development, applying safety-first principles to clean, reliable code.",
+      description: "Made the bold transition to software development, bringing precision and structure to building clean, dependable code.",
       color: "text-purple-600"
     }
   ];
@@ -58,11 +58,41 @@ export default function AboutSection() {
           <h2 className="text-4xl md:text-5xl font-bold text-slate-900 mb-6">
             A Unique <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-indigo-600">Journey</span>
           </h2>
-          <p className="text-xl text-slate-600 leading-relaxed">
-            My path from Occupational Health & Safety to Software Development isn't traditional, 
-            but it's given me a distinctive perspective that combines safety-first thinking 
-            with innovative problem-solving.
-          </p>
+          <p className="text-lg leading-relaxed text-slate-700">
+                Coming from a 
+                <span className="font-semibold text-blue-600"> decade-long career in safety management </span>
+                and transitioning into 
+                <span className="font-semibold text-indigo-600"> full-stack development </span>
+                has been both 
+                <span className="text-slate-800"> challenging </span> 
+                and 
+                <span className="text-slate-800"> deeply rewarding</span>. 
+                It’s a journey fueled by 
+                <span className="font-medium text-indigo-600"> determination</span>, 
+                <span className="font-medium text-indigo-600"> teamwork</span>, 
+                and a 
+                <span className="font-medium text-indigo-600"> passion for solving real-world problems</span> 
+                through technology.
+                <br /><br />
+                Along the way, I’ve built and deployed 
+                <span className="font-semibold text-blue-600"> practical, user-centered applications </span> 
+                using 
+                <span className="text-indigo-600"> modern tools and frameworks</span>. 
+                I take pride in being 
+                <span className="font-semibold text-indigo-600"> innovative</span>, 
+                <span className="font-semibold text-indigo-600"> adaptable</span>, 
+                and 
+                <span className="font-semibold text-indigo-600"> always eager to learn something new</span>.
+                <br /><br />
+                If the goal is 
+                <span className="font-semibold text-blue-600"> building impactful, meaningful products </span> 
+                that solve real problems, then I am excited to contribute and grow alongside a team that shares the same drive.
+                <br /><br />
+                Beyond tech, I am a 
+                <span className="text-slate-800 font-semibold"> husband</span>, 
+                <span className="text-slate-800 font-semibold"> a father</span> and 
+                <span className="text-slate-800 font-semibold"> a friend</span>.
+            </p>
         </motion.div>
 
         <div className="max-w-6xl mx-auto mb-20">
