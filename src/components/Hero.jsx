@@ -125,19 +125,19 @@ export default function HeroSection() {
             className="flex justify-center gap-6"
           >
             <a 
-              href="https://github.com" 
+              href="https://github.com/kwado5683" 
               className="w-12 h-12 bg-white rounded-full shadow-lg flex items-center justify-center text-slate-600 hover:text-blue-600 hover:shadow-xl transition-all duration-300"
             >
               <Github className="w-5 h-5" />
             </a>
             <a 
-              href="https://linkedin.com" 
+              href="https://www.linkedin.com/in/chikwado-ani-2b6042114/" 
               className="w-12 h-12 bg-white rounded-full shadow-lg flex items-center justify-center text-slate-600 hover:text-blue-600 hover:shadow-xl transition-all duration-300"
             >
               <Linkedin className="w-5 h-5" />
             </a>
             <a 
-              href="mailto:chikwado@example.com" 
+              href="mailto:chikwadovalentine2@gmail.com" 
               className="w-12 h-12 bg-white rounded-full shadow-lg flex items-center justify-center text-slate-600 hover:text-blue-600 hover:shadow-xl transition-all duration-300"
             >
               <Mail className="w-5 h-5" />

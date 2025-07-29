@@ -10,14 +10,14 @@ import { Button } from '@/components/Button';
 export default function ProjectsSection() {
   const projects = [
     {
-      title: "Safety Compliance Dashboard",
+      title: "Safety Management System",
       description: "A comprehensive web application for managing workplace safety compliance, incident tracking, and risk assessment workflows.",
-      image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=500&h=300&fit=crop",
+      image: "/sms.jpg",
       technologies: ["React", "Node.js", "PostgreSQL", "Next.js"],
       category: "Full Stack",
       links: {
-        github: "https://github.com",
-        live: "https://demo.com"
+        github: "https://github.com/kwado5683/Safety-Management-System",
+        live: "https://safety-management-system-2h1s.vercel.app"
       }
     },
     {
@@ -113,7 +113,7 @@ export default function ProjectsSection() {
                       <div className="flex gap-3">
                         {project.links.github && (
                          <a 
-                         href="https://github.com/kwado5683/Zayn-Ai-Agent" 
+                         href={project.links.github}
                          target="_blank"
                          rel="noopener noreferrer"
                          >
@@ -128,19 +128,23 @@ export default function ProjectsSection() {
                           </a>
                         )}
                         {project.links.live && (
+                          
+                          <Button
+                          asChild
+                          size="sm"
+                          className="flex-1 bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-700 hover:to-indigo-700"
+                        >
                           <a
-                          href="https://zayn-ai-agent.vercel.app"
-                          target="_blank"
-                          rel="noopener noreferrer" 
-                          >
-                            <Button 
-                            size="sm"
-                            className="flex-1 bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-700 hover:to-indigo-700"
+                            href={project.links.live}
+                            target="_blank"
+                            rel="noopener noreferrer"
                           >
                             <ExternalLink className="w-4 h-4 mr-2" />
                             Live Demo
-                          </Button>
                           </a>
+                        </Button>
+                        
+                          
                         )}
                       </div>
                     </CardContent>
