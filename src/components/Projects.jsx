@@ -31,14 +31,14 @@ export default function ProjectsSection() {
       }
     },
     {
-      title: "Portfolio Website",
-      description: "Modern, responsive personal website showcasing my journey from safety management to software development.",
-      image: "https://images.unsplash.com/photo-1467232004584-a241de8bcf5d?w=500&h=300&fit=crop",
-      technologies: ["React", "Next.js", "Tailwind CSS", "Framer Motion"],
+      title: "Zayn AI-agent",
+      description: "Zayn is an AI chatbot project built with Next.js, @ai-sdk/react, and Tailwind CSS, featuring real-time conversations powered by modern AI tools. ",
+      image: "/zayn.jpg",
+      technologies: ["React", "Next.js", "Tailwind CSS", "@ai-sdk/react"],
       category: "Frontend",
       links: {
-        github: "https://github.com",
-        live: "https://portfolio.com"
+        github: "https://github.com/kwado5683/Zayn-Ai-Agent",
+        live: "https://zayn-ai-agent.vercel.app/"
       }
     }
   ];
@@ -112,7 +112,12 @@ export default function ProjectsSection() {
                       
                       <div className="flex gap-3">
                         {project.links.github && (
-                          <Button 
+                         <a 
+                         href="https://github.com/kwado5683/Zayn-Ai-Agent" 
+                         target="_blank"
+                         rel="noopener noreferrer"
+                         >
+                         <Button 
                             variant="outline" 
                             size="sm"
                             className="flex-1 border-slate-300 hover:bg-slate-50"
@@ -120,15 +125,22 @@ export default function ProjectsSection() {
                             <Github className="w-4 h-4 mr-2" />
                             Code
                           </Button>
+                          </a>
                         )}
                         {project.links.live && (
-                          <Button 
+                          <a
+                          href="https://zayn-ai-agent.vercel.app"
+                          target="_blank"
+                          rel="noopener noreferrer" 
+                          >
+                            <Button 
                             size="sm"
                             className="flex-1 bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-700 hover:to-indigo-700"
                           >
                             <ExternalLink className="w-4 h-4 mr-2" />
                             Live Demo
                           </Button>
+                          </a>
                         )}
                       </div>
                     </CardContent>
