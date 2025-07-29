@@ -15,10 +15,29 @@ export default function ContactSection() {
     message: ''
   });
 
-  const handleSubmit = (e) => {
+  
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    console.log('Form submitted:', formData);
+  
+    try {
+      const res = await fetch('/api/contact', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(formData)
+      });
+  
+      if (res.ok) {
+        alert('Message sent!');
+        setFormData({ name: '', email: '', message: '' });
+      } else {
+        alert('Failed to send. Please try again.');
+      }
+    } catch (err) {
+      console.error(err);
+      alert('Something went wrong.');
+    }
   };
+  
 
   const handleChange = (e) => {
     setFormData({
