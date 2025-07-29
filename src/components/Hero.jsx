@@ -19,7 +19,10 @@ export default function HeroSection() {
   };
 
   return (
-    <section id="hero" className="min-h-screen flex items-center justify-center relative overflow-hidden bg-gradient-to-br from-slate-100 via-purple to-blue-100">
+    <section id="hero" className="min-h-screen flex items-center justify-center relative overflow-hidden bg-[url('/kwado.jpeg')] bg-contain bg-center h-64 w-full" > 
+     <div className="absolute inset-0 bg-black/60 z-0" />
+
+    {/* bg-gradient-to-br from-slate-100 via-purple to-blue-100"> */}
       <div className="absolute inset-0 bg-grid-slate-100 opacity-20 -z-10" />
       
       <div className="container mx-auto px-6 py-20 relative z-10">
@@ -31,7 +34,7 @@ export default function HeroSection() {
             className="mb-8"
           >
             <div className="mx-auto flex items-center justify-center w-48 h-48 rounded-full overflow-hidden shadow-2xl">
-                <motion.div
+                {/* <motion.div
                     animate={{
                     scale: [1, 1.05, 1],
                     }}
@@ -48,7 +51,7 @@ export default function HeroSection() {
                     height={192} 
                     className="object-cover w-full h-full" 
                 />
-            </motion.div>
+            </motion.div> */}
             </div>
           </motion.div>
 
@@ -58,9 +61,9 @@ export default function HeroSection() {
             transition={{ duration: 0.8, delay: 0.2 }}
             className="mb-6"
           >
-            <h1 className="text-5xl md:text-7xl font-extrabold text-slate-900 leading-tight">
+            <h1 className="text-5xl md:text-7xl font-extrabold text-yellow-300 drop-shadow-lg leading-tight">
               Chikwado
-              <span className="block text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-indigo-600">
+              <span className="block text-transparent bg-clip-text bg-gradient-to-r from-yellow-600 to-indigo-600">
                 Valentine Ani
               </span>
             </h1>
@@ -83,9 +86,9 @@ export default function HeroSection() {
                 <span className="text-sm font-medium text-indigo-800">Software Developer</span>
               </div>
             </div>
-            <p className="text-xl md:text-2xl text-slate-600 max-w-3xl mx-auto leading-relaxed">
+            <p className="text-xl md:text-2xl text-slate-300 max-w-3xl mx-auto leading-relaxed">
               Transforming from <span className="font-semibold text-blue-600">Occupational Health & Safety</span> 
-              {" "}to cutting-edge <span className="font-semibold text-indigo-600">Software Development</span>
+              {" "}to cutting-edge <span className="font-semibold text-blue-600">Software Development</span>
               {" "}— bringing precision and innovation to every line of code.
             </p>
           </motion.div>
