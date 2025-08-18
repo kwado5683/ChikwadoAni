@@ -51,7 +51,7 @@ export default function ContactSection() {
       icon: Mail,
       label: "Email",
       value: "chikwadovalentine2@gmail.com",
-      href: "chikwadovalentine2@gmail.com"
+      href: null
     },
     {
       icon: MapPin,
@@ -71,13 +71,13 @@ export default function ContactSection() {
     {
       icon: Github,
       label: "GitHub",
-      href: "https://github.com",
+      href: "https://github.com/kwado5683",
       color: "hover:text-slate-900"
     },
     {
       icon: Linkedin,
       label: "LinkedIn",
-      href: "https://linkedin.com",
+      href: "https://www.linkedin.com/in/chikwado-ani-2b6042114/",
       color: "hover:text-blue-600"
     }
   ];
@@ -171,8 +171,8 @@ export default function ContactSection() {
               transition={{ duration: 0.8 }}
             >
               <Card className="border-0 shadow-xl bg-white">
-                <CardContent className="p-8">
-                  <h3 className="text-xl font-bold text-slate-900 mb-6">Send a Message</h3>
+                <CardContent className="">
+                  <h3 className="text-xl font-bold text-slate-900 mb-6 p-5">Send a Message</h3>
                   
                   <form onSubmit={handleSubmit} className="space-y-6">
                     <div className="grid md:grid-cols-2 gap-4">
@@ -222,9 +222,9 @@ export default function ContactSection() {
                     
                     <Button 
                       type="submit"
-                      className="w-full bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-700 hover:to-indigo-700 text-white py-3"
+                      className="w-full bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-700 hover:to-indigo-700 text-white py-3 cursor-pointer"
                     >
-                      <Send className="w-4 h-4 mr-2" />
+                      <Send className="w-4 h-4 mr-2 " />
                       Send Message
                     </Button>
                   </form>

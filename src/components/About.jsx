@@ -71,8 +71,8 @@ export default function AboutSection() {
                 <span className="font-medium text-indigo-600"> determination</span>, 
                 <span className="font-medium text-indigo-600"> teamwork</span>, 
                 and a 
-                <span className="font-medium text-indigo-600"> passion for solving real-world problems</span> 
-                through technology.
+                <span className="font-medium text-indigo-600"> passion for solving real-world problems through technology.</span> 
+                
                 <br /><br />
                 Along the way, I’ve built and deployed 
                 <span className="font-semibold text-blue-600"> practical, user-centered applications </span> 
@@ -95,7 +95,7 @@ export default function AboutSection() {
             </p>
         </motion.div>
 
-        <div className="max-w-6xl mx-auto mb-20">
+        <div className="max-w-6xl mx-auto mb-20 ">
           <div className="grid md:grid-cols-3 gap-8">
             {journey.map((step, index) => (
               <motion.div
@@ -105,7 +105,7 @@ export default function AboutSection() {
                 viewport={{ once: true }}
                 transition={{ duration: 0.8, delay: index * 0.2 }}
               >
-                <Card className="h-full border-0 shadow-lg hover:shadow-xl transition-all duration-300 group">
+                <Card className="h-full border-0 shadow-lg hover:shadow-xl transition-all duration-300 group p-8">
                   <CardContent className="p-8 text-center">
                     <div className="w-16 h-16 mx-auto mb-6 rounded-full bg-gradient-to-br from-slate-50 to-slate-100 flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
                       <step.icon className={`w-8 h-8 ${step.color}`} />

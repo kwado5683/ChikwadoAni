@@ -10,6 +10,17 @@ import { Button } from '@/components/Button';
 export default function ProjectsSection() {
   const projects = [
     {
+        title: "My first Portfolio Site",
+        description: "A full-stack testimonial and reference board, built with Next.js (App Router) and PostgreSQL, it features dynamic data fetching, visitors can leave feedback directly, with submissions stored and displayed in real-time. If you manage to visit, please leave me a comment.",
+        image: "/sms.jpg",
+        technologies: ["React", "Node.js", "PostgreSQL", "Next.js"],
+        category: "Full Stack",
+        links: {
+          github: "https://github.com/kwado5683/week8-portfolioWebSite",
+          live: "https://week8-portfolio-web-site.vercel.app/"
+        }
+      },
+    {
       title: "Safety Management System",
       description: "A comprehensive web application for managing workplace safety compliance, incident tracking, and risk assessment workflows.",
       image: "/sms.jpg",
@@ -20,16 +31,16 @@ export default function ProjectsSection() {
         live: "https://safety-management-system-2h1s.vercel.app"
       }
     },
-    {
-      title: "Task Management API",
-      description: "RESTful API with user authentication, task CRUD operations, and real-time notifications built with modern best practices.",
-      image: "https://images.unsplash.com/photo-1555066931-4365d14bab8c?w=500&h=300&fit=crop",
-      technologies: ["Node.js", "Express", "MongoDB", "JWT"],
-      category: "Backend",
-      links: {
-        github: "https://github.com"
-      }
-    },
+    // {
+    //   title: "Task Management API",
+    //   description: "RESTful API with user authentication, task CRUD operations, and real-time notifications built with modern best practices.",
+    //   image: "https://images.unsplash.com/photo-1555066931-4365d14bab8c?w=500&h=300&fit=crop",
+    //   technologies: ["Node.js", "Express", "MongoDB", "JWT"],
+    //   category: "Backend",
+    //   links: {
+    //     github: "https://github.com"
+    //   }
+    // },
     {
       title: "Zayn AI-agent",
       description: "Zayn is an AI chatbot project built with Next.js, @ai-sdk/react, and Tailwind CSS, featuring real-time conversations powered by modern AI tools. ",
@@ -120,7 +131,7 @@ export default function ProjectsSection() {
                          <Button 
                             variant="outline" 
                             size="sm"
-                            className="flex-1 border-slate-300 hover:bg-slate-50"
+                            className="flex-1 border-slate-300 cursor-pointer hover:bg-slate-50 "
                           >
                             <Github className="w-4 h-4 mr-2" />
                             Code
@@ -138,6 +149,7 @@ export default function ProjectsSection() {
                             href={project.links.live}
                             target="_blank"
                             rel="noopener noreferrer"
+                            className="flex items-center justify-center w-full h-full"
                           >
                             <ExternalLink className="w-4 h-4 mr-2" />
                             Live Demo
