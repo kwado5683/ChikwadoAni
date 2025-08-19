@@ -51,7 +51,7 @@ export default function ContactSection() {
       icon: Mail,
       label: "Email",
       value: "chikwadovalentine2@gmail.com",
-      href: "chikwadovalentine2@gmail.com"
+      href: null
     },
     {
       icon: MapPin,
@@ -71,13 +71,13 @@ export default function ContactSection() {
     {
       icon: Github,
       label: "GitHub",
-      href: "https://github.com",
+      href: "https://github.com/kwado5683",
       color: "hover:text-slate-900"
     },
     {
       icon: Linkedin,
       label: "LinkedIn",
-      href: "https://linkedin.com",
+      href: "https://www.linkedin.com/in/chikwado-ani-2b6042114/",
       color: "hover:text-blue-600"
     }
   ];
@@ -96,7 +96,7 @@ export default function ContactSection() {
             Let's <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-indigo-600">Connect</span>
           </h2>
           <p className="text-xl text-slate-600 leading-relaxed">
-            Ready to bring safety-first thinking and innovative solutions to your next project
+          Ready to bring fresh ideas and impactful solutions to your next project
           </p>
         </motion.div>
 
@@ -112,9 +112,9 @@ export default function ContactSection() {
               <div>
                 <h3 className="text-2xl font-bold text-slate-900 mb-6">Get In Touch</h3>
                 <p className="text-slate-600 leading-relaxed mb-8">
-                  Whether you're looking for a developer who brings a unique perspective, 
-                  or you'd like to discuss how safety principles can enhance software quality, 
-                  I'd love to hear from you.
+                Whether you are looking for a developer who can quickly adapt and add value,
+                 or just someone to exchange ideas about tech, I am always open to connecting.
+
                 </p>
               </div>
 
@@ -136,7 +136,7 @@ export default function ContactSection() {
                       {info.href ? (
                         <a 
                           href={info.href}
-                          className="text-slate-900 font-medium hover:text-blue-600 transition-colors"
+                          className="text-slate-900 font-medium hover:text-green-600 transition-colors"
                         >
                           {info.value}
                         </a>
@@ -171,8 +171,8 @@ export default function ContactSection() {
               transition={{ duration: 0.8 }}
             >
               <Card className="border-0 shadow-xl bg-white">
-                <CardContent className="p-8">
-                  <h3 className="text-xl font-bold text-slate-900 mb-6">Send a Message</h3>
+                <CardContent className="">
+                  <h3 className="text-xl font-bold text-slate-900 mb-6 p-5">Send a Message</h3>
                   
                   <form onSubmit={handleSubmit} className="space-y-6">
                     <div className="grid md:grid-cols-2 gap-4">
@@ -222,9 +222,9 @@ export default function ContactSection() {
                     
                     <Button 
                       type="submit"
-                      className="w-full bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-700 hover:to-indigo-700 text-white py-3"
+                      className="w-full bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-green-700 hover:to-green-700 text-white py-3 cursor-pointer"
                     >
-                      <Send className="w-4 h-4 mr-2" />
+                      <Send className="w-4 h-4 mr-2 " />
                       Send Message
                     </Button>
                   </form>
