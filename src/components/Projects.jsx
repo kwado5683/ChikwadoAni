@@ -10,9 +10,9 @@ import { Button } from '@/components/Button';
 export default function ProjectsSection() {
   const projects = [
     {
-        title: "My first Portfolio Site",
+        title: "Testimonial and Reference Board",
         description: "A full-stack testimonial and reference board, built with Next.js (App Router) and PostgreSQL, it features dynamic data fetching, visitors can leave feedback directly, with submissions stored and displayed in real-time. If you manage to visit, please leave me a comment.",
-        image: "/sms.jpg",
+        image: "/kwado.jpeg",
         technologies: ["React", "Node.js", "PostgreSQL", "Next.js"],
         category: "Full Stack",
         links: {
@@ -131,7 +131,7 @@ export default function ProjectsSection() {
                          <Button 
                             variant="outline" 
                             size="sm"
-                            className="flex-1 border-slate-300 cursor-pointer hover:bg-slate-50 "
+                            className="flex-1 border-slate-300 cursor-pointer hover:bg-green-600 "
                           >
                             <Github className="w-4 h-4 mr-2" />
                             Code
@@ -143,7 +143,7 @@ export default function ProjectsSection() {
                           <Button
                           asChild
                           size="sm"
-                          className="flex-1 bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-700 hover:to-indigo-700"
+                          className="flex-1 bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-green-600 hover:to-green-600"
                         >
                           <a
                             href={project.links.live}

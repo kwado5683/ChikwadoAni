@@ -234,8 +234,8 @@ export default function HeroSection() {
               </div>
             </div>
             <p className="text-lg md:text-xl text-slate-700 max-w-2xl mx-auto leading-relaxed">
-              Transitioning from <span className="font-semibold text-blue-600">Occupational Health & Safety</span> 
-              into <span className="font-semibold text-indigo-600">Software Development</span>, 
+              Transitioning from <span className="font-semibold text-blue-600">Occupational Health & Safety </span> 
+              to <span className="font-semibold text-indigo-600">Software Development</span>, 
               blending precision and innovation in every project.
             </p>
           </motion.div>
@@ -251,7 +251,7 @@ export default function HeroSection() {
               <Button 
                 size="lg" 
                 className="w-full bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-700 hover:to-indigo-700 
-                text-white px-8 py-3 text-lg shadow-lg hover:shadow-xl transition-all duration-300"
+                text-white px-8 py-3 text-lg shadow-lg cursor-pointer hover:shadow-xl transition-all duration-300"
               >
                 <Download className="w-5 h-5 mr-2" />
                 Download Resume
@@ -261,7 +261,7 @@ export default function HeroSection() {
               size="lg" 
               variant="outline" 
               onClick={scrollToAbout}
-              className="w-full sm:w-auto border-2 border-slate-300 text-slate-700 hover:bg-green-600 hover:text-white 
+              className="w-full sm:w-auto border-2 border-slate-300 text-slate-100 cursor-pointer hover:bg-green-600 hover:text-white 
               px-8 py-3 text-lg transition-all duration-300"
             >
               Learn More
