@@ -5,20 +5,16 @@ import { redirect } from "next/navigation";
 import Link from "next/link";
 import LikeBtn from "@/Components/LikeBtn";
 
-
 export default async function References({ params }) {
   const source = await params.source; 
-
 
   const validSources = ["coursemates", "colleagues", "fandf"];
   if (!validSources.includes(source)) {
     return <p className="text-red-500">Invalid reference type.</p>;
   }
 
-
   const query = await db.query(`SELECT * FROM ${source} ORDER BY ${source}_id DESC`);
   const userentry = query.rows;
-
 
   async function handleSubmit(formData) {
     "use server";
@@ -26,14 +22,12 @@ export default async function References({ params }) {
     const name = formData.get("name");
     const comment = formData.get("comment");
   
-
     const result = await db.query(
       `INSERT INTO ${source} (name, comment) VALUES ($1, $2) RETURNING ${source}_id`,
       [name, comment]
     );
     const source_id = result.rows[0][`${source}_id`];
   
-
     let insertQuery = "";
     let insertValue = [];
   
@@ -48,7 +42,6 @@ export default async function References({ params }) {
       insertValue = [name, comment, source, source_id];
     }
   
-
     await db.query(insertQuery, insertValue);
   
     revalidatePath(`/references/${source}`);
@@ -66,70 +59,82 @@ export default async function References({ params }) {
   }
 
   return (
-    <main className="max-w-xl mx-auto p-6 space-y-4">
-      <form action={handleSubmit} className="space-y-4">
-        <fieldset>
-          <legend className="text-lg font-bold mb-2">
-            Leave a Reference ({source})
-          </legend>
+    <main className="min-h-screen bg-gradient-to-br from-[#0f0f23] via-[#1a1a2e] to-[#16213e] text-white">
+      <div className="max-w-xl mx-auto p-6 space-y-6">
+        <div className="neumorphic p-6 rounded-lg">
+          <form action={handleSubmit} className="space-y-4">
+            <fieldset>
+              <legend className="text-lg font-bold mb-4 text-white">
+                Leave a Reference ({source})
+              </legend>
 
-          <label htmlFor="name">Name</label>
-          <input
-            type="text"
-            name="name"
-            required
-            className="border w-full p-2 rounded"
-          />
+              <div className="space-y-2">
+                <label htmlFor="name" className="block text-sm font-medium text-gray-300">Name</label>
+                <input
+                  type="text"
+                  name="name"
+                  required
+                  className="w-full p-3 rounded neumorphic border-0 text-white placeholder-gray-400 focus:neumorphic-hover"
+                  placeholder="Your name"
+                />
+              </div>
 
-          <label htmlFor="comment">Comment</label>
-          <input
-            type="text"
-            name="comment"
-            required
-            className="border w-full p-2 rounded"
-          />
-        </fieldset>
+              <div className="space-y-2">
+                <label htmlFor="comment" className="block text-sm font-medium text-gray-300">Comment</label>
+                <input
+                  type="text"
+                  name="comment"
+                  required
+                  className="w-full p-3 rounded neumorphic border-0 text-white placeholder-gray-400 focus:neumorphic-hover"
+                  placeholder="Your comment"
+                />
+              </div>
+            </fieldset>
 
-        <button
-          type="submit"
-          className="bg-blue-600 text-white px-4 py-2 rounded"
-        >
-          Post
-        </button>
-      </form>
+            <button
+              type="submit"
+              className="w-full bg-gradient-to-r from-primary to-secondary hover:from-orange-600 hover:to-orange-700 text-white px-4 py-3 rounded neumorphic hover:neumorphic-hover transition-all duration-300"
+            >
+              Post
+            </button>
+          </form>
+        </div>
 
-      <Link href="/" className="underline text-blue-500">
-        ← Back to Home
-      </Link>
+        <Link href="/" className="inline-block neumorphic px-4 py-2 rounded text-primary hover:neumorphic-hover hover:bg-orange-600/20 hover:text-orange-200 transition-all duration-300">
+          ← Back to Home
+        </Link>
 
-      <h2 className="text-xl font-semibold mt-6 mb-2">All References</h2>
+        <h2 className="text-xl font-semibold mt-6 mb-4 text-white">All References</h2>
 
-      {userentry.length === 0 ? (
-        <p>No comments yet.</p>
-      ) : (
-        userentry.map((user) => (
-          <div key={user[`${source}_id`]} className="border p-3 rounded mb-4">
-            <h3 className="font-bold">{user.name}</h3>
-            <p>{user.comment}</p>
-            {user.time && (
-              <p className="text-sm text-gray-500">
-                {new Date(user.time).toDateString()}
-              </p>
-            )}
-            <div>
-              <form action={deleteComment.bind(null, user[`${source}_id`])}>
-                <button
-                  type="submit"
-                  className="text-red-600 mt-2 underline hover:text-red-800"
-                >
-                  Delete
-                </button>
-              </form>
-              <LikeBtn />
-            </div>
+        {userentry.length === 0 ? (
+          <p className="text-gray-300 text-center py-8">No comments yet.</p>
+        ) : (
+          <div className="space-y-4">
+            {userentry.map((user) => (
+              <div key={user[`${source}_id`]} className="neumorphic p-4 rounded-lg hover:neumorphic-hover transition-all duration-300">
+                <h3 className="font-bold text-white mb-2">{user.name}</h3>
+                <p className="text-gray-300 mb-3">{user.comment}</p>
+                {user.time && (
+                  <p className="text-sm text-gray-400 mb-3">
+                    {new Date(user.time).toDateString()}
+                  </p>
+                )}
+                <div className="flex items-center justify-between">
+                  <form action={deleteComment.bind(null, user[`${source}_id`])}>
+                    <button
+                      type="submit"
+                      className="text-red-400 hover:text-orange-400 underline transition-colors duration-300"
+                    >
+                      Delete
+                    </button>
+                  </form>
+                  <LikeBtn />
+                </div>
+              </div>
+            ))}
           </div>
-        ))
-      )}
+        )}
+      </div>
     </main>
   );
 }

@@ -6,7 +6,7 @@ import { Mail, MapPin, Phone, Send, Github, Linkedin } from 'lucide-react';
 import { Button } from '@/components/Button';
 import { Input } from '@/components/Input';
 import { Textarea } from '@/components/Textarea';
-import { Card, CardContent } from '@/components/Card'; // fixed the import path
+import { Card, CardContent } from '@/components/Card';
 
 export default function ContactSection() {
   const [formData, setFormData] = useState({
@@ -15,7 +15,6 @@ export default function ContactSection() {
     message: ''
   });
 
-  
   const handleSubmit = async (e) => {
     e.preventDefault();
   
@@ -37,7 +36,6 @@ export default function ContactSection() {
       alert('Something went wrong.');
     }
   };
-  
 
   const handleChange = (e) => {
     setFormData({
@@ -72,18 +70,18 @@ export default function ContactSection() {
       icon: Github,
       label: "GitHub",
       href: "https://github.com/kwado5683",
-      color: "hover:text-slate-900"
+      color: "hover:text-primary"
     },
     {
       icon: Linkedin,
       label: "LinkedIn",
       href: "https://www.linkedin.com/in/chikwado-ani-2b6042114/",
-      color: "hover:text-blue-600"
+      color: "hover:text-secondary"
     }
   ];
 
   return (
-    <section id="contact" className="py-20 bg-gradient-to-br from-slate-50 to-blue-50">
+    <section id="contact" className="py-20 bg-gradient-to-br from-[#16213e] via-[#1a1a2e] to-[#0f0f23]">
       <div className="container mx-auto px-6">
         <motion.div
           initial={{ opacity: 0, y: 50 }}
@@ -92,10 +90,10 @@ export default function ContactSection() {
           transition={{ duration: 0.8 }}
           className="max-w-4xl mx-auto text-center mb-16"
         >
-          <h2 className="text-4xl md:text-5xl font-bold text-slate-900 mb-6">
-            Let's <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-indigo-600">Connect</span>
+          <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+            Let's <span className="gradient-text-primary">Connect</span>
           </h2>
-          <p className="text-xl text-slate-600 leading-relaxed">
+          <p className="text-xl text-gray-300 leading-relaxed">
           Ready to bring fresh ideas and impactful solutions to your next project
           </p>
         </motion.div>
@@ -110,11 +108,10 @@ export default function ContactSection() {
               className="space-y-8"
             >
               <div>
-                <h3 className="text-2xl font-bold text-slate-900 mb-6">Get In Touch</h3>
-                <p className="text-slate-600 leading-relaxed mb-8">
+                <h3 className="text-2xl font-bold text-white mb-6">Get In Touch</h3>
+                <p className="text-gray-300 leading-relaxed mb-8">
                 Whether you are looking for a developer who can quickly adapt and add value,
                  or just someone to exchange ideas about tech, I am always open to connecting.
-
                 </p>
               </div>
 
@@ -128,20 +125,20 @@ export default function ContactSection() {
                     transition={{ duration: 0.6, delay: index * 0.1 }}
                     className="flex items-center gap-4"
                   >
-                    <div className="w-12 h-12 bg-white rounded-xl shadow-md flex items-center justify-center">
-                      <info.icon className="w-5 h-5 text-blue-600" />
+                    <div className="w-12 h-12 neumorphic rounded-xl flex items-center justify-center hover:bg-orange-600/20 transition-all duration-300 group">
+                      <info.icon className="w-5 h-5 text-primary group-hover:text-orange-400 transition-colors duration-300" />
                     </div>
                     <div>
-                      <p className="text-sm font-medium text-slate-500">{info.label}</p>
+                      <p className="text-sm font-medium text-gray-400">{info.label}</p>
                       {info.href ? (
                         <a 
                           href={info.href}
-                          className="text-slate-900 font-medium hover:text-green-600 transition-colors"
+                          className="text-white font-medium hover:text-orange-400 transition-colors"
                         >
                           {info.value}
                         </a>
                       ) : (
-                        <p className="text-slate-900 font-medium">{info.value}</p>
+                        <p className="text-white font-medium">{info.value}</p>
                       )}
                     </div>
                   </motion.div>
@@ -149,15 +146,15 @@ export default function ContactSection() {
               </div>
 
               <div className="pt-6">
-                <p className="text-sm font-medium text-slate-500 mb-4">Follow Me</p>
+                <p className="text-sm font-medium text-gray-400 mb-4">Follow Me</p>
                 <div className="flex gap-4">
                   {socialLinks.map((social, index) => (
                     <a
                       key={index}
                       href={social.href}
-                      className={`w-10 h-10 bg-white rounded-lg shadow-md flex items-center justify-center text-slate-600 ${social.color} transition-all duration-300 hover:shadow-lg hover:scale-105`}
+                      className={`w-10 h-10 glassmorphic rounded-lg flex items-center justify-center text-white hover:bg-orange-600/20 transition-all duration-300 hover:glassmorphic-hover hover:scale-105`}
                     >
-                      <social.icon className="w-5 h-5" />
+                      <social.icon className="w-5 h-5 group-hover:text-orange-400 transition-colors duration-300" />
                     </a>
                   ))}
                 </div>
@@ -170,14 +167,14 @@ export default function ContactSection() {
               viewport={{ once: true }}
               transition={{ duration: 0.8 }}
             >
-              <Card className="border-0 shadow-xl bg-white">
+              <Card className="neumorphic border-0">
                 <CardContent className="">
-                  <h3 className="text-xl font-bold text-slate-900 mb-6 p-5">Send a Message</h3>
+                  <h3 className="text-xl font-bold text-white mb-6 p-5">Send a Message</h3>
                   
                   <form onSubmit={handleSubmit} className="space-y-6">
                     <div className="grid md:grid-cols-2 gap-4">
                       <div>
-                        <label className="block text-sm font-medium text-slate-700 mb-2">
+                        <label className="block text-sm font-medium text-gray-300 mb-2">
                           Name
                         </label>
                         <Input
@@ -185,12 +182,12 @@ export default function ContactSection() {
                           value={formData.name}
                           onChange={handleChange}
                           placeholder="Your name"
-                          className="border-slate-300 focus:border-blue-500"
+                          className="neumorphic border-0 text-white placeholder-gray-400 focus:neumorphic-hover"
                           required
                         />
                       </div>
                       <div>
-                        <label className="block text-sm font-medium text-slate-700 mb-2">
+                        <label className="block text-sm font-medium text-gray-300 mb-2">
                           Email
                         </label>
                         <Input
@@ -199,14 +196,14 @@ export default function ContactSection() {
                           value={formData.email}
                           onChange={handleChange}
                           placeholder="your.email@example.com"
-                          className="border-slate-300 focus:border-blue-500"
+                          className="neumorphic border-0 text-white placeholder-gray-400 focus:neumorphic-hover"
                           required
                         />
                       </div>
                     </div>
                     
                     <div>
-                      <label className="block text-sm font-medium text-slate-700 mb-2">
+                      <label className="block text-sm font-medium text-gray-300 mb-2">
                         Message
                       </label>
                       <Textarea
@@ -215,14 +212,15 @@ export default function ContactSection() {
                         onChange={handleChange}
                         placeholder="Tell me about your project or opportunity..."
                         rows={4}
-                        className="border-slate-300 focus:border-blue-500"
+                        className="neumorphic border-0 text-white placeholder-gray-400 focus:neumorphic-hover"
                         required
                       />
                     </div>
                     
                     <Button 
                       type="submit"
-                      className="w-full bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-green-700 hover:to-green-700 text-white py-3 cursor-pointer"
+                      size="lg"
+                      className="w-full bg-gradient-to-r from-primary to-secondary hover:from-orange-600 hover:to-orange-700 text-white py-3 cursor-pointer neumorphic hover:neumorphic-hover transition-all duration-300"
                     >
                       <Send className="w-4 h-4 mr-2 " />
                       Send Message

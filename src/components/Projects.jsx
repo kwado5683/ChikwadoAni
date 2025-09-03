@@ -31,16 +31,6 @@ export default function ProjectsSection() {
         live: "https://safety-management-system-2h1s.vercel.app"
       }
     },
-    // {
-    //   title: "Task Management API",
-    //   description: "RESTful API with user authentication, task CRUD operations, and real-time notifications built with modern best practices.",
-    //   image: "https://images.unsplash.com/photo-1555066931-4365d14bab8c?w=500&h=300&fit=crop",
-    //   technologies: ["Node.js", "Express", "MongoDB", "JWT"],
-    //   category: "Backend",
-    //   links: {
-    //     github: "https://github.com"
-    //   }
-    // },
     {
       title: "Zayn AI-agent",
       description: "Zayn is an AI chatbot project built with Next.js, @ai-sdk/react, and Tailwind CSS, featuring real-time conversations powered by modern AI tools. ",
@@ -61,7 +51,7 @@ export default function ProjectsSection() {
   };
 
   return (
-    <section id="projects" className="py-20 bg-white">
+    <section id="projects" className="py-20 bg-gradient-to-br from-[#0f0f23] via-[#1a1a2e] to-[#16213e]">
       <div className="container mx-auto px-6">
         <motion.div
           initial={{ opacity: 0, y: 50 }}
@@ -70,16 +60,16 @@ export default function ProjectsSection() {
           transition={{ duration: 0.8 }}
           className="max-w-4xl mx-auto text-center mb-16"
         >
-          <h2 className="text-4xl md:text-5xl font-bold text-slate-900 mb-6">
-            Featured <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-indigo-600">Projects</span>
+          <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+            Featured <span className="gradient-text-primary">Projects</span>
           </h2>
-          <p className="text-xl text-slate-600 leading-relaxed">
+          <p className="text-xl text-gray-300 leading-relaxed">
             Real-world applications showcasing my technical skills and problem-solving approach
           </p>
         </motion.div>
 
         <div className="max-w-6xl mx-auto">
-          <div className="grid lg:grid-cols-2 xl:grid-cols-3 gap-8">
+          <div className="grid lg:grid-cols-2 xl:grid-cols-3 gap-8 auto-rows-fr">
             {projects.map((project, index) => {
               const CategoryIcon = categoryIcons[project.category];
               return (
@@ -90,73 +80,124 @@ export default function ProjectsSection() {
                   viewport={{ once: true }}
                   transition={{ duration: 0.8, delay: index * 0.2 }}
                 >
-                  <Card className="h-full border-0 shadow-lg hover:shadow-xl transition-all duration-300 group overflow-hidden">
-                    <div className="relative overflow-hidden">
-                      <img 
+                  <Card className="h-full neumorphic hover:neumorphic-hover transition-all duration-700 ease-out group overflow-hidden border-0 flex flex-col hover:scale-[1.03] hover:shadow-2xl hover:-translate-y-2">
+                    <div className="relative overflow-hidden p-4">
+                      <motion.img 
                         src={project.image} 
                         alt={project.title}
-                        className="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-300"
+                        className="w-full h-48 object-cover rounded-lg"
+                        whileHover={{ scale: 1.08, rotateY: 3 }}
+                        transition={{ duration: 0.6, ease: "easeInOut" }}
+                        initial={{ scale: 1, rotateY: 0 }}
+                        animate={{ scale: 1, rotateY: 0 }}
                       />
-                      <div className="absolute top-4 left-4">
-                        <div className="flex items-center gap-2 bg-white/90 backdrop-blur-sm px-3 py-1 rounded-full">
-                          <CategoryIcon className="w-4 h-4 text-blue-600" />
-                          <span className="text-sm font-medium text-slate-700">{project.category}</span>
-                        </div>
-                      </div>
+                                              <motion.div 
+                          className="absolute top-6 left-6"
+                          whileHover={{ scale: 1.05, rotate: 2 }}
+                          transition={{ duration: 0.5, ease: "easeInOut" }}
+                          initial={{ scale: 1, rotate: 0 }}
+                          animate={{ scale: 1, rotate: 0 }}
+                        >
+                          <div className="flex items-center gap-2 glassmorphic px-3 py-1 rounded-full hover:glassmorphic-hover hover:bg-orange-600/20 transition-all duration-300 focus:bg-orange-600/20 focus:ring-2 focus:ring-orange-400 focus:ring-opacity-50">
+                            <CategoryIcon className="w-4 h-4 text-primary group-hover:scale-110 group-hover:text-orange-400 transition-all duration-300" />
+                            <span className="text-sm font-medium text-white group-hover:text-orange-200 transition-colors duration-300">{project.category}</span>
+                          </div>
+                        </motion.div>
                     </div>
                     
-                    <CardContent className="p-6">
-                      <h3 className="text-xl font-bold text-slate-900 mb-3">{project.title}</h3>
-                      <p className="text-slate-600 mb-4 leading-relaxed">{project.description}</p>
-                      
-                      <div className="flex flex-wrap gap-2 mb-6">
-                        {project.technologies.map((tech, techIndex) => (
-                          <Badge 
-                            key={techIndex} 
-                            variant="secondary"
-                            className="bg-blue-50 text-blue-700 hover:bg-blue-100"
-                          >
-                            {tech}
-                          </Badge>
-                        ))}
+                    <CardContent className="p-8 flex flex-col flex-1">
+                      <div className="flex-1">
+                        <motion.h3 
+                          className="text-xl font-bold text-white mb-4 group-hover:text-primary transition-colors duration-500"
+                          whileHover={{ x: 3 }}
+                          transition={{ duration: 0.5, ease: "easeInOut" }}
+                          initial={{ x: 0 }}
+                          animate={{ x: 0 }}
+                        >
+                          {project.title}
+                        </motion.h3>
+                        <motion.p 
+                          className="text-gray-300 mb-6 leading-relaxed px-2 group-hover:text-gray-200 transition-colors duration-500"
+                          whileHover={{ x: 3 }}
+                          transition={{ duration: 0.5, ease: "easeInOut" }}
+                          initial={{ x: 0 }}
+                          animate={{ x: 0 }}
+                        >
+                          {project.description}
+                        </motion.p>
+                        
+                        <div className="flex flex-wrap gap-3 mb-8 px-2">
+                          {project.technologies.map((tech, techIndex) => (
+                            <motion.div
+                              key={techIndex}
+                              whileHover={{ scale: 1.08, y: -2 }}
+                              whileTap={{ scale: 0.98 }}
+                              transition={{ duration: 0.4, ease: "easeInOut" }}
+                              initial={{ scale: 1, y: 0 }}
+                              animate={{ scale: 1, y: 0 }}
+                            >
+                              <Badge 
+                                variant="outline"
+                                className="text-white bg-gray-800 border-gray-600 hover:bg-orange-600 hover:text-white hover:border-orange-500 transition-all duration-300 focus:bg-orange-600 focus:text-white focus:ring-2 focus:ring-orange-400 focus:ring-opacity-50 cursor-pointer shadow-md hover:shadow-lg"
+                              >
+                                {tech}
+                              </Badge>
+                            </motion.div>
+                          ))}
+                        </div>
                       </div>
                       
-                      <div className="flex gap-3">
-                        {project.links.github && (
-                         <a 
-                         href={project.links.github}
-                         target="_blank"
-                         rel="noopener noreferrer"
-                         >
-                         <Button 
-                            variant="outline" 
-                            size="sm"
-                            className="flex-1 border-slate-300 cursor-pointer hover:bg-green-600 "
+                      <div className="grid grid-cols-2 gap-3 px-2 mt-auto">
+                        {project.links.github ? (
+                          <motion.a 
+                            href={project.links.github}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="w-full group/btn"
+                            whileHover={{ scale: 1.03, y: -1 }}
+                            whileTap={{ scale: 0.98 }}
+                            transition={{ duration: 0.4, ease: "easeInOut" }}
+                            initial={{ scale: 1, y: 0 }}
+                            animate={{ scale: 1, y: 0 }}
                           >
-                            <Github className="w-4 h-4 mr-2" />
-                            Code
-                          </Button>
-                          </a>
+                            <Button 
+                              variant="outline" 
+                              size="sm"
+                              className="w-full bg-gray-800 text-white cursor-pointer border-0 transition-all duration-300 hover:bg-orange-600 hover:text-white focus:bg-orange-600 focus:text-white focus:ring-2 focus:ring-orange-400 focus:ring-opacity-50 shadow-lg hover:shadow-xl"
+                            >
+                              <Github className="w-4 h-4 mr-2 transition-transform duration-300 group-hover/btn:scale-110" />
+                              Code
+                            </Button>
+                          </motion.a>
+                        ) : (
+                          <div className="w-full h-10"></div> // Placeholder for consistent spacing
                         )}
-                        {project.links.live && (
-                          
-                          <Button
-                          asChild
-                          size="sm"
-                          className="flex-1 bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-green-600 hover:to-green-600"
-                        >
-                          <a
+                        
+                        {project.links.live ? (
+                          <motion.a
                             href={project.links.live}
                             target="_blank"
                             rel="noopener noreferrer"
-                            className="flex items-center justify-center w-full h-full"
+                            className="w-full group/btn"
+                            whileHover={{ scale: 1.03, y: -1 }}
+                            whileTap={{ scale: 0.98 }}
+                            transition={{ duration: 0.4, ease: "easeInOut" }}
+                            initial={{ scale: 1, y: 0 }}
+                            animate={{ scale: 1, y: 0 }}
                           >
-                            <ExternalLink className="w-4 h-4 mr-2" />
-                            Live Demo
-                          </a>
-                        </Button>
-                        
-                          
+                            <Button
+                              asChild
+                              size="sm"
+                              className="w-full bg-gradient-to-r from-gray-600 to-gray-700 hover:from-orange-600 hover:to-orange-700 text-white transition-all duration-300 hover:shadow-xl focus:from-orange-600 focus:to-orange-700 focus:ring-2 focus:ring-orange-400 focus:ring-opacity-50 shadow-lg"
+                            >
+                              <span className="flex items-center justify-center w-full h-full">
+                                <ExternalLink className="w-4 h-4 mr-2 transition-transform duration-300 group-hover/btn:scale-110" />
+                                Live Demo
+                              </span>
+                            </Button>
+                          </motion.a>
+                        ) : (
+                          <div className="w-full h-10"></div> // Placeholder for consistent spacing
                         )}
                       </div>
                     </CardContent>

@@ -52,21 +52,21 @@ export default function FloatingNav({ activeSection }) {
       exit={{ opacity: 0, y: 100 }}
       className="fixed bottom-8 left-1/2 transform -translate-x-1/2 z-50"
     >
-      <div className="bg-white/90 backdrop-blur-md rounded-full shadow-lg border border-white/20 px-6 py-3">
+      <div className="glassmorphic rounded-full px-6 py-3">
         <div className="flex items-center gap-2">
           {navItems.map((item) => (
             <button
               key={item.id}
               onClick={() => scrollToSection(item.id)}
-              className={`relative p-3 rounded-full transition-all duration-300 group ${
-                activeSection === item.id
-                  ? 'bg-blue-600 text-white'
-                  : 'text-slate-600 hover:text-blue-600 hover:bg-blue-50'
-              }`}
+                                className={`relative p-3 rounded-full transition-all duration-300 group ${
+                    activeSection === item.id
+                      ? 'neumorphic text-white glow-primary'
+                      : 'text-gray-300 hover:text-orange-600 hover:neumorphic'
+                  }`}
             >
               <item.icon className="w-5 h-5" />
               
-              <div className="absolute bottom-full left-1/2 transform -translate-x-1/2 mb-2 px-2 py-1 bg-slate-900 text-white text-xs rounded opacity-0 group-hover:opacity-100 transition-opacity duration-200 whitespace-nowrap">
+              <div className="absolute bottom-full left-1/2 transform -translate-x-1/2 mb-2 px-2 py-1 glassmorphic text-white text-xs rounded opacity-0 group-hover:opacity-100 transition-opacity duration-200 whitespace-nowrap">
                 {item.label}
               </div>
             </button>

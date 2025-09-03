@@ -39,7 +39,7 @@ export default function Home() {
 
   return (
     <motion.div
-      className="min-h-screen bg-white"
+      className="min-h-screen"
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       transition={{ duration: 1 }}

@@ -11,19 +11,19 @@ export default function AboutSection() {
       icon: Shield,
       title: "Safety Expert",
       description: "Built expertise in Occupational Health & Safety Management, developing critical thinking and risk assessment skills.",
-      color: "text-blue-600"
+      color: "text-primary"
     },
     {
       icon: Lightbulb,
       title: "Discovery",
       description: "Discovered passion for technology and problem-solving through automation and digital safety solutions.",
-      color: "text-indigo-600"
+      color: "text-secondary"
     },
     {
       icon: Code2,
       title: "Transformation",
       description: "Made the bold transition to software development, bringing precision and structure to building clean, dependable code.",
-      color: "text-purple-600"
+      color: "text-accent"
     }
   ];
 
@@ -46,7 +46,7 @@ export default function AboutSection() {
   ];
 
   return (
-    <section id="about" className="py-20 bg-white">
+    <section id="about" className="py-20 bg-gradient-to-br from-[#0f0f23] via-[#1a1a2e] to-[#16213e]">
       <div className="container mx-auto px-6">
         <motion.div
           initial={{ opacity: 0, y: 50 }}
@@ -55,43 +55,43 @@ export default function AboutSection() {
           transition={{ duration: 0.8 }}
           className="max-w-4xl mx-auto text-center mb-16"
         >
-          <h2 className="text-4xl md:text-5xl font-bold text-slate-900 mb-6">
-            A Unique <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-indigo-600">Journey</span>
+          <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+            A Unique <span className="gradient-text-primary">Journey</span>
           </h2>
-          <p className="text-lg leading-relaxed text-slate-700">
+          <p className="text-lg leading-relaxed text-gray-300">
                 Coming from a 
-                <span className="font-semibold text-blue-600"> decade-long career in safety management </span>
+                <span className="font-semibold text-primary"> decade-long career in safety management </span>
                 and transitioning into 
-                <span className="font-semibold text-indigo-600"> full-stack development </span>
+                <span className="font-semibold text-secondary"> full-stack development </span>
                 has been both 
-                <span className="text-slate-800"> challenging </span> 
+                <span className="text-white"> challenging </span> 
                 and 
-                <span className="text-slate-800"> deeply rewarding</span>. 
-                It’s a journey fueled by 
-                <span className="font-medium text-indigo-600"> determination</span>, 
-                <span className="font-medium text-indigo-600"> teamwork</span>, 
+                <span className="text-white"> deeply rewarding</span>. 
+                It's a journey fueled by 
+                <span className="font-medium text-secondary"> determination</span>, 
+                <span className="font-medium text-secondary"> teamwork</span>, 
                 and a 
-                <span className="font-medium text-indigo-600"> passion for solving real-world problems through technology.</span> 
+                <span className="font-medium text-secondary"> passion for solving real-world problems through technology.</span> 
                 
                 <br /><br />
-                Along the way, I’ve built and deployed 
-                <span className="font-semibold text-blue-600"> practical, user-centered applications </span> 
+                Along the way, I've built and deployed 
+                <span className="font-semibold text-primary"> practical, user-centered applications </span> 
                 using 
-                <span className="text-indigo-600"> modern tools and frameworks</span>. 
+                <span className="text-secondary"> modern tools and frameworks</span>. 
                 I take pride in being 
-                <span className="font-semibold text-indigo-600"> innovative</span>, 
-                <span className="font-semibold text-indigo-600"> adaptable</span>, 
+                <span className="font-semibold text-secondary"> innovative</span>, 
+                <span className="font-semibold text-secondary"> adaptable</span>, 
                 and 
-                <span className="font-semibold text-indigo-600"> always eager to learn something new</span>.
+                <span className="font-semibold text-secondary"> always eager to learn something new</span>.
                 <br /><br />
                 If the goal is 
-                <span className="font-semibold text-blue-600"> building impactful, meaningful products </span> 
+                <span className="font-semibold text-primary"> building impactful, meaningful products </span> 
                 that solve real problems, then I am excited to contribute and grow alongside a team that shares the same drive.
                 <br /><br />
                 Beyond tech, I am a 
-                <span className="text-slate-800 font-semibold"> husband</span>, 
-                <span className="text-slate-800 font-semibold"> a father</span> and 
-                <span className="text-slate-800 font-semibold"> a friend</span>.
+                <span className="text-white font-semibold"> husband</span>, 
+                <span className="text-white font-semibold"> a father</span> and 
+                <span className="text-white font-semibold"> a friend</span>.
             </p>
         </motion.div>
 
@@ -105,13 +105,13 @@ export default function AboutSection() {
                 viewport={{ once: true }}
                 transition={{ duration: 0.8, delay: index * 0.2 }}
               >
-                <Card className="h-full border-0 shadow-lg hover:shadow-xl transition-all duration-300 group p-8">
+                <Card className="h-full neumorphic hover:neumorphic-hover hover:bg-orange-600/10 transition-all duration-300 group p-8 border-0">
                   <CardContent className="p-8 text-center">
-                    <div className="w-16 h-16 mx-auto mb-6 rounded-full bg-gradient-to-br from-slate-50 to-slate-100 flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
-                      <step.icon className={`w-8 h-8 ${step.color}`} />
+                    <div className="w-16 h-16 mx-auto mb-6 rounded-full neumorphic flex items-center justify-center group-hover:scale-110 transition-transform duration-300 group-hover:bg-orange-600/20">
+                      <step.icon className={`w-8 h-8 ${step.color} group-hover:text-orange-400 transition-colors duration-300`} />
                     </div>
-                    <h3 className="text-xl font-bold text-slate-900 mb-4">{step.title}</h3>
-                    <p className="text-slate-600 leading-relaxed">{step.description}</p>
+                    <h3 className="text-xl font-bold text-white mb-4 group-hover:text-orange-200 transition-colors duration-300">{step.title}</h3>
+                    <p className="text-gray-300 leading-relaxed group-hover:text-orange-100 transition-colors duration-300">{step.description}</p>
                   </CardContent>
                 </Card>
               </motion.div>
@@ -126,8 +126,8 @@ export default function AboutSection() {
           transition={{ duration: 0.8 }}
           className="max-w-4xl mx-auto"
         >
-          <h3 className="text-3xl font-bold text-slate-900 text-center mb-12">
-            What I Bring to <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-indigo-600">Every Project</span>
+          <h3 className="text-3xl font-bold text-white text-center mb-12">
+            What I Bring to <span className="gradient-text-primary">Every Project</span>
           </h3>
           
           <div className="grid md:grid-cols-3 gap-6">
@@ -140,11 +140,11 @@ export default function AboutSection() {
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 className="text-center group"
               >
-                <div className="w-12 h-12 mx-auto mb-4 rounded-lg bg-gradient-to-br from-blue-100 to-indigo-100 flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
-                  <value.icon className="w-6 h-6 text-blue-600" />
+                <div className="w-12 h-12 mx-auto mb-4 rounded-lg neumorphic flex items-center justify-center group-hover:scale-110 transition-transform duration-300 group-hover:bg-orange-600/20">
+                  <value.icon className="w-6 h-6 text-primary group-hover:text-orange-500 transition-colors duration-300" />
                 </div>
-                <h4 className="text-lg font-semibold text-slate-900 mb-2">{value.title}</h4>
-                <p className="text-slate-600 text-sm leading-relaxed">{value.description}</p>
+                <h4 className="text-lg font-semibold text-white mb-2 group-hover:text-orange-200 transition-colors duration-300">{value.title}</h4>
+                <p className="text-gray-300 text-sm leading-relaxed group-hover:text-orange-100 transition-colors duration-300">{value.description}</p>
               </motion.div>
             ))}
           </div>
