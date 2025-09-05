@@ -220,9 +220,19 @@ export default function ContactSection() {
                     <Button 
                       type="submit"
                       size="lg"
-                      className="w-full bg-gradient-to-r from-primary to-secondary hover:from-orange-600 hover:to-orange-700 text-white py-3 cursor-pointer neumorphic hover:neumorphic-hover transition-all duration-300"
+                      className="w-full text-white py-3 cursor-pointer transition-all duration-300 rounded-lg"
+                      style={{
+                        background: 'linear-gradient(to right, var(--primary), var(--secondary))',
+                        boxShadow: 'inset 2px 2px 5px rgba(255, 255, 255, 0.05), inset -2px -2px 5px rgba(0, 0, 0, 0.3), 0 4px 16px rgba(0, 0, 0, 0.4)'
+                      }}
+                      onMouseEnter={(e) => {
+                        e.target.style.background = 'linear-gradient(to right, #ea580c, #c2410c)';
+                      }}
+                      onMouseLeave={(e) => {
+                        e.target.style.background = 'linear-gradient(to right, var(--primary), var(--secondary))';
+                      }}
                     >
-                      <Send className="w-4 h-4 mr-2 " />
+                      {/* <Send className="w-4 h-4 mr-2 " /> */}
                       Send Message
                     </Button>
                   </form>

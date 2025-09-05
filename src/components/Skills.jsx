@@ -17,7 +17,7 @@ export default function SkillsSection() {
     frontend: {
       title: "Frontend Development",
       icon: Globe,
-      color: "from-primary to-secondary",
+      color: "from-blue-500 to-cyan-500",
       skills: [
         { name: "JavaScript",description: "ES6+, Modern JS features" },
         { name: "React", description: "Hooks, Context, State Management" },
@@ -28,7 +28,7 @@ export default function SkillsSection() {
     backend: {
       title: "Backend Development",
       icon: Server,
-      color: "from-secondary to-accent",
+      color: "from-green-500 to-emerald-500",
       skills: [
         { name: "Node.js", description: "Express, APIs, Middleware" },
         { name: "RESTful APIs", description: "Design, Implementation, Testing" },
@@ -39,7 +39,7 @@ export default function SkillsSection() {
     database: {
       title: "Database Management",
       icon: Database,
-      color: "from-accent to-primary",
+      color: "from-purple-500 to-violet-500",
       skills: [
         { name: "PostgreSQL", description: "Complex queries, Optimization" },
         { name: "MongoDB", description: "NoSQL, Aggregation, Indexing" },
@@ -50,7 +50,7 @@ export default function SkillsSection() {
     tools: {
       title: "Tools & DevOps",
       icon: Terminal,
-      color: "from-primary to-accent",
+      color: "from-orange-500 to-red-500",
       skills: [
         { name: "Git", description: "Version control, Branching, Collaboration" },
         { name: "Linux", description: "Command line, System administration" },
@@ -63,7 +63,7 @@ export default function SkillsSection() {
   const categories = Object.keys(skillCategories);
 
   return (
-    <section id="skills" className="py-20 bg-gradient-to-br from-[#1a1a2e] via-[#16213e] to-[#0f0f23]">
+    <section id="skills" className="py-20 bg-gradient-to-br from-[#16213e] via-[#1a1a2e] to-[#0f0f23]">
       <div className="container mx-auto px-6">
         <motion.div
           initial={{ opacity: 0, y: 50 }}
@@ -72,10 +72,10 @@ export default function SkillsSection() {
           transition={{ duration: 0.8 }}
           className="max-w-4xl mx-auto text-center mb-16"
         >
-          <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-            Technical <span className="gradient-text-primary">Expertise</span>
+          <h2 className="text-4xl md:text-5xl font-bold text-white-900 mb-6">
+            Technical <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-indigo-600">Expertise</span>
           </h2>
-          <p className="text-xl text-gray-300 leading-relaxed">
+          <p className="text-xl text-white-200 leading-relaxed">
             A comprehensive stack built through hands-on experience and continuous learning
           </p>
         </motion.div>
@@ -91,13 +91,13 @@ export default function SkillsSection() {
                   onClick={() => setActiveCategory(category)}
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
-                  className={`flex items-center gap-3 px-6 py-3 rounded-full font-medium transition-all duration-300 cursor-pointer ${
+                  className={`flex items-center gap-3 px-6 py-3 rounded-full font-medium transition-all duration-300 cursor-pointer group ${
                     activeCategory === category
-                      ? 'neumorphic text-white glow-primary'
+                      ? 'bg-orange-600 text-white shadow-lg hover:bg-orange-700'
                       : 'glassmorphic text-gray-300 hover:glassmorphic-hover hover:bg-orange-600 hover:text-white'
                   }`}
                 >
-                  <IconComponent className="w-5 h-5" />
+                  <IconComponent className="w-5 h-5 group-hover:text-orange-400 transition-colors duration-300" />
                   {categoryData.title}
                 </motion.button>
               );
@@ -115,10 +115,10 @@ export default function SkillsSection() {
           <Card className="neumorphic border-0 p-8">
             <CardContent className="p-8">
               <div className="flex items-center gap-3 mb-8">
-                <div className={`w-12 h-12 rounded-xl bg-gradient-to-r ${skillCategories[activeCategory].color} flex items-center justify-center neumorphic`}>
+                <div className={`w-12 h-12 rounded-xl bg-gradient-to-r ${skillCategories[activeCategory].color} flex items-center justify-center`}>
                   {React.createElement(skillCategories[activeCategory].icon, { className: "w-6 h-6 text-white" })}
                 </div>
-                <h3 className="text-2xl font-bold text-white">
+                <h3 className="text-2xl font-bold text-white-900">
                   {skillCategories[activeCategory].title}
                 </h3>
               </div>
@@ -132,12 +132,23 @@ export default function SkillsSection() {
                     transition={{ duration: 0.5, delay: index * 0.1 }}
                     className="group"
                   >
-                    <div className="flex justify-between items-center mb-2">
+                    <div className="flex justify-between items-center  mb-2">
                       <div>
-                        <h4 className="font-semibold text-white">{skill.name}</h4>
-                        <p className="text-sm text-gray-300">{skill.description}</p>
+                        <h4 className="font-semibold text-white-900">{skill.name}</h4>
+                        <p className="text-sm text-white-600">{skill.description}</p>
                       </div>
+                      {/* <Badge variant="outline" className="text-sm font-medium">
+                        
+                      </Badge> */}
                     </div>
+                    {/* <div className="w-full bg-slate-200 rounded-full h-2 overflow-hidden">
+                      <motion.div
+                        initial={{ width: 0 }}
+                        animate={{ width: `${skill.level}%` }}
+                        transition={{ duration: 1, delay: index * 0.1 }}
+                        className={`h-full bg-gradient-to-r ${skillCategories[activeCategory].color} rounded-full`}
+                      />
+                    </div> */}
                   </motion.div>
                 ))}
               </div>
