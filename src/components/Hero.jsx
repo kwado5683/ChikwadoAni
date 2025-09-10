@@ -233,14 +233,14 @@ export default function HeroSection() {
             className="mt-6 mb-10"
           >
                          <div className="flex items-center justify-center gap-4 mb-6">
-                               <div className="flex items-center gap-2 px-4 py-2 neumorphic rounded-full hover:neumorphic-hover hover:bg-orange-600/20 transition-all duration-300 group">
-                  <Shield className="w-4 h-4 text-primary group-hover:text-orange-400 transition-colors duration-300" />
-                  <span className="text-sm font-medium text-white group-hover:text-orange-200 transition-colors duration-300">Safety Expert</span>
+                               <div className="flex items-center gap-2 px-4 py-2 neumorphic rounded-full hover:neumorphic-hover hover:bg-orange-600/20 transition-all duration-500 group">
+                  <Shield className="w-4 h-4 text-primary group-hover:text-orange-400 transition-colors duration-900" />
+                  <span className="text-sm font-medium text-white group-hover:text-orange-200 transition-colors duration-500">Safety Expert</span>
                 </div>
                 <div className="w-2 h-2 bg-primary rounded-full animate-pulse"></div>
-                <div className="flex items-center gap-2 px-4 py-2 neumorphic rounded-full hover:neumorphic-hover hover:bg-orange-600/20 transition-all duration-300 group">
-                  <Code2 className="w-4 h-4 text-secondary group-hover:text-orange-400 transition-colors duration-300" />
-                  <span className="text-sm font-medium text-white group-hover:text-orange-200 transition-colors duration-300">Software Developer</span>
+                <div className="flex items-center gap-2 px-4 py-2 neumorphic rounded-full hover:neumorphic-hover hover:bg-orange-600/20 transition-all duration-500 group">
+                  <Code2 className="w-4 h-4 text-secondary group-hover:text-orange-400 transition-colors duration-500" />
+                  <span className="text-sm font-medium text-white group-hover:text-orange-200 transition-colors duration-500">Software Developer</span>
                 </div>
              </div>
                          <p className="text-lg md:text-xl text-gray-300 max-w-2xl mx-auto leading-relaxed">
@@ -261,7 +261,7 @@ export default function HeroSection() {
                               <Button 
                   size="lg" 
                   className="w-full bg-gradient-to-r from-primary to-secondary hover:from-orange-600 hover:to-orange-700 
-                   text-white px-8 py-3 text-lg cursor-pointer glow-primary transition-all duration-300 rounded-lg"
+                   text-white px-8 py-3 text-lg cursor-pointer glow-primary transition-all duration-500 rounded-lg"
                   style={{
                     boxShadow: 'inset 2px 2px 5px rgba(255, 255, 255, 0.05), inset -2px -2px 5px rgba(0, 0, 0, 0.3), 0 4px 16px rgba(0, 0, 0, 0.4)'
                   }}
@@ -274,7 +274,7 @@ export default function HeroSection() {
               size="lg" 
               onClick={scrollToAbout}
               className="w-full sm:w-auto text-white cursor-pointer hover:bg-orange-600
-               px-8 py-3 text-lg border-0 transition-all duration-300 rounded-lg"
+               px-8 py-3 text-lg border-0 transition-all duration-900 rounded-lg"
               style={{
                 boxShadow: 'inset 2px 2px 5px rgba(255, 255, 255, 0.05), inset -2px -2px 5px rgba(0, 0, 0, 0.3), 0 4px 16px rgba(0, 0, 0, 0.4)'
               }}
@@ -306,9 +306,9 @@ export default function HeroSection() {
                   text-white hover:glassmorphic-hover hover:bg-orange-600/20 cursor-pointer group"
                  title={label}
                >
-                 <div className="group-hover:scale-110 transition-transform duration-300">
+                 <div className="group-hover:scale-110 transition-transform duration-500">
                    {React.cloneElement(icon, { 
-                     className: "w-5 h-5 group-hover:text-orange-400 transition-colors duration-300" 
+                     className: "w-5 h-5 group-hover:text-orange-400 transition-colors duration-500" 
                    })}
                  </div>
                </motion.a>
@@ -322,8 +322,8 @@ export default function HeroSection() {
                  transition={{ duration: 1.5, repeat: Infinity }}
                  className="absolute bottom-8 left-1/2 -translate-x-1/2 cursor-pointer"
              >
-                 <div className="w-12 h-12 neumorphic rounded-full flex items-center justify-center hover:neumorphic-hover hover:bg-orange-600/20 transition-all duration-300">
-                   <ChevronDown className="w-6 h-6 text-primary hover:text-orange-400 transition-colors duration-300" />
+                 <div className="w-12 h-12 neumorphic rounded-full flex items-center justify-center hover:neumorphic-hover hover:bg-orange-600/20 transition-all duration-500">
+                   <ChevronDown className="w-6 h-6 text-primary hover:text-orange-400 transition-colors duration-500" />
                  </div>
              </motion.div>
         </div>

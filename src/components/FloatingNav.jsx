@@ -58,7 +58,7 @@ export default function FloatingNav({ activeSection }) {
             <button
               key={item.id}
               onClick={() => scrollToSection(item.id)}
-                                className={`relative p-3 rounded-full transition-all duration-300 group ${
+                                className={`relative p-3 rounded-full transition-all duration-500 group ${
                     activeSection === item.id
                       ? 'neumorphic text-white glow-primary'
                       : 'text-gray-300 hover:text-orange-600 hover:neumorphic'
@@ -66,7 +66,7 @@ export default function FloatingNav({ activeSection }) {
             >
               <item.icon className="w-5 h-5" />
               
-              <div className="absolute bottom-full left-1/2 transform -translate-x-1/2 mb-2 px-2 py-1 glassmorphic text-white text-xs rounded opacity-0 group-hover:opacity-100 transition-opacity duration-200 whitespace-nowrap">
+              <div className="absolute bottom-full left-1/2 transform -translate-x-1/2 mb-2 px-2 py-1 glassmorphic text-white text-xs rounded opacity-0 group-hover:opacity-100 transition-opacity duration-400 whitespace-nowrap">
                 {item.label}
               </div>
             </button>

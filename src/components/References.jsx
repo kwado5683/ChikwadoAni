@@ -93,14 +93,14 @@ export default async function References({ params }) {
 
             <button
               type="submit"
-              className="w-full bg-gradient-to-r from-primary to-secondary hover:from-orange-600 hover:to-orange-700 text-white px-4 py-3 rounded neumorphic hover:neumorphic-hover transition-all duration-300"
+              className="w-full bg-gradient-to-r from-primary to-secondary hover:from-orange-600 hover:to-orange-700 text-white px-4 py-3 rounded neumorphic hover:neumorphic-hover transition-all duration-500"
             >
               Post
             </button>
           </form>
         </div>
 
-        <Link href="/" className="inline-block neumorphic px-4 py-2 rounded text-primary hover:neumorphic-hover hover:bg-orange-600/20 hover:text-orange-200 transition-all duration-300">
+        <Link href="/" className="inline-block neumorphic px-4 py-2 rounded text-primary hover:neumorphic-hover hover:bg-orange-600/20 hover:text-orange-200 transition-all duration-500">
           ← Back to Home
         </Link>
 
@@ -111,7 +111,7 @@ export default async function References({ params }) {
         ) : (
           <div className="space-y-4">
             {userentry.map((user) => (
-              <div key={user[`${source}_id`]} className="neumorphic p-4 rounded-lg hover:neumorphic-hover transition-all duration-300">
+              <div key={user[`${source}_id`]} className="neumorphic p-4 rounded-lg hover:neumorphic-hover transition-all duration-500">
                 <h3 className="font-bold text-white mb-2">{user.name}</h3>
                 <p className="text-gray-300 mb-3">{user.comment}</p>
                 {user.time && (
@@ -123,7 +123,7 @@ export default async function References({ params }) {
                   <form action={deleteComment.bind(null, user[`${source}_id`])}>
                     <button
                       type="submit"
-                      className="text-red-400 hover:text-orange-400 underline transition-colors duration-300"
+                      className="text-red-400 hover:text-orange-400 underline transition-colors duration-500"
                     >
                       Delete
                     </button>

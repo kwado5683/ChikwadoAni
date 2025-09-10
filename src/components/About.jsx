@@ -105,13 +105,13 @@ export default function AboutSection() {
                 viewport={{ once: true }}
                 transition={{ duration: 0.8, delay: index * 0.2 }}
               >
-                <Card className="h-full neumorphic hover:neumorphic-hover hover:bg-orange-600/10 transition-all duration-300 group p-8 border-0">
+                <Card className="h-full neumorphic hover:neumorphic-hover hover:bg-orange-600/10 transition-all duration-500 group p-8 border-0">
                   <CardContent className="p-8 text-center">
-                    <div className="w-16 h-16 mx-auto mb-6 rounded-full neumorphic flex items-center justify-center group-hover:scale-110 transition-transform duration-300 group-hover:bg-orange-600/20">
-                      <step.icon className={`w-8 h-8 ${step.color} group-hover:text-orange-400 transition-colors duration-300`} />
+                    <div className="w-16 h-16 mx-auto mb-6 rounded-full neumorphic flex items-center justify-center group-hover:scale-110 transition-transform duration-500 group-hover:bg-orange-600/20">
+                      <step.icon className={`w-8 h-8 ${step.color} group-hover:text-orange-400 transition-colors duration-500`} />
                     </div>
-                    <h3 className="text-xl font-bold text-white mb-4 group-hover:text-orange-200 transition-colors duration-300">{step.title}</h3>
-                    <p className="text-gray-300 leading-relaxed group-hover:text-orange-100 transition-colors duration-300">{step.description}</p>
+                    <h3 className="text-xl font-bold text-white mb-4 group-hover:text-orange-200 transition-colors duration-500">{step.title}</h3>
+                    <p className="text-gray-300 leading-relaxed group-hover:text-orange-100 transition-colors duration-500">{step.description}</p>
                   </CardContent>
                 </Card>
               </motion.div>
@@ -137,14 +137,14 @@ export default function AboutSection() {
                 initial={{ opacity: 0, scale: 0.9 }}
                 whileInView={{ opacity: 1, scale: 1 }}
                 viewport={{ once: true }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
+                transition={{ duration: 0.8, delay: index * 0.1 }}
                 className="text-center group"
               >
-                <div className="w-12 h-12 mx-auto mb-4 rounded-lg neumorphic flex items-center justify-center group-hover:scale-110 transition-transform duration-300 group-hover:bg-orange-600/20">
-                  <value.icon className="w-6 h-6 text-primary group-hover:text-orange-500 transition-colors duration-300" />
+                <div className="w-12 h-12 mx-auto mb-4 rounded-lg neumorphic flex items-center justify-center group-hover:scale-110 transition-transform duration-500 group-hover:bg-orange-600/20">
+                  <value.icon className="w-6 h-6 text-primary group-hover:text-orange-500 transition-colors duration-500" />
                 </div>
-                <h4 className="text-lg font-semibold text-white mb-2 group-hover:text-orange-200 transition-colors duration-300">{value.title}</h4>
-                <p className="text-gray-300 text-sm leading-relaxed group-hover:text-orange-100 transition-colors duration-300">{value.description}</p>
+                <h4 className="text-lg font-semibold text-white mb-2 group-hover:text-orange-200 transition-colors duration-500">{value.title}</h4>
+                <p className="text-gray-300 text-sm leading-relaxed group-hover:text-orange-100 transition-colors duration-500">{value.description}</p>
               </motion.div>
             ))}
           </div>
