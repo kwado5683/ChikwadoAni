@@ -91,13 +91,13 @@ export default function SkillsSection() {
                   onClick={() => setActiveCategory(category)}
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
-                  className={`flex items-center gap-3 px-6 py-3 rounded-full font-medium transition-all duration-300 cursor-pointer group ${
+                  className={`flex items-center gap-3 px-6 py-3 rounded-full font-medium transition-all duration-500 cursor-pointer group ${
                     activeCategory === category
                       ? 'bg-orange-600 text-white shadow-lg hover:bg-orange-700'
                       : 'glassmorphic text-gray-300 hover:glassmorphic-hover hover:bg-orange-600 hover:text-white'
                   }`}
                 >
-                  <IconComponent className="w-5 h-5 group-hover:text-orange-400 transition-colors duration-300" />
+                  <IconComponent className="w-5 h-5 group-hover:text-orange-400 transition-colors duration-500" />
                   {categoryData.title}
                 </motion.button>
               );
@@ -109,7 +109,7 @@ export default function SkillsSection() {
           key={activeCategory}
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5 }}
+          transition={{ duration: 0.7 }}
           className="max-w-4xl mx-auto"
         >
           <Card className="neumorphic border-0 p-8">
@@ -129,7 +129,7 @@ export default function SkillsSection() {
                     key={skill.name}
                     initial={{ opacity: 0, x: -20 }}
                     animate={{ opacity: 1, x: 0 }}
-                    transition={{ duration: 0.5, delay: index * 0.1 }}
+                    transition={{ duration: 0.7, delay: index * 0.1 }}
                     className="group"
                   >
                     <div className="flex justify-between items-center  mb-2">

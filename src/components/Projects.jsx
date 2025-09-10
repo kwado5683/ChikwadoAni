@@ -27,8 +27,8 @@ export default function ProjectsSection() {
       technologies: ["React", "Node.js", "PostgreSQL", "Next.js"],
       category: "Full Stack",
       links: {
-        github: "https://github.com/kwado5683/Safety-Management-System",
-        live: "https://safety-management-system-2h1s.vercel.app"
+        github: "https://github.com/kwado5683/Safety",
+        live: "https://safety-mgt.vercel.app"
       }
     },
     {
@@ -80,27 +80,27 @@ export default function ProjectsSection() {
                   viewport={{ once: true }}
                   transition={{ duration: 0.8, delay: index * 0.2 }}
                 >
-                  <Card className="h-full neumorphic hover:neumorphic-hover transition-all duration-700 ease-out group overflow-hidden border-0 flex flex-col hover:scale-[1.03] hover:shadow-2xl hover:-translate-y-2">
+                  <Card className="h-full neumorphic hover:neumorphic-hover transition-all duration-1000 ease-out group overflow-hidden border-0 flex flex-col hover:scale-[1.03] hover:shadow-2xl hover:-translate-y-2">
                     <div className="relative overflow-hidden p-4">
                       <motion.img 
                         src={project.image} 
                         alt={project.title}
                         className="w-full h-48 object-cover rounded-lg"
                         whileHover={{ scale: 1.08, rotateY: 3 }}
-                        transition={{ duration: 0.6, ease: "easeInOut" }}
+                        transition={{ duration: 0.8, ease: "easeInOut" }}
                         initial={{ scale: 1, rotateY: 0 }}
                         animate={{ scale: 1, rotateY: 0 }}
                       />
                                               <motion.div 
                           className="absolute top-6 left-6"
                           whileHover={{ scale: 1.05, rotate: 2 }}
-                          transition={{ duration: 0.5, ease: "easeInOut" }}
+                          transition={{ duration: 0.7, ease: "easeInOut" }}
                           initial={{ scale: 1, rotate: 0 }}
                           animate={{ scale: 1, rotate: 0 }}
                         >
-                          <div className="flex items-center gap-2 glassmorphic px-3 py-1 rounded-full hover:glassmorphic-hover hover:bg-orange-600/20 transition-all duration-300 focus:bg-orange-600/20 focus:ring-2 focus:ring-orange-400 focus:ring-opacity-50">
-                            <CategoryIcon className="w-4 h-4 text-primary group-hover:scale-110 group-hover:text-orange-400 transition-all duration-300" />
-                            <span className="text-sm font-medium text-white group-hover:text-orange-200 transition-colors duration-300">{project.category}</span>
+                          <div className="flex items-center gap-2 glassmorphic px-3 py-1 rounded-full hover:glassmorphic-hover hover:bg-orange-600/20 transition-all duration-1000 focus:bg-orange-600/20 focus:ring-2 focus:ring-orange-400 focus:ring-opacity-50">
+                            <CategoryIcon className="w-4 h-4 text-primary group-hover:scale-110 group-hover:text-orange-400 transition-all duration-1000" />
+                            <span className="text-sm font-medium text-white group-hover:text-orange-200 transition-colors duration-1000">{project.category}</span>
                           </div>
                         </motion.div>
                     </div>
@@ -108,18 +108,18 @@ export default function ProjectsSection() {
                     <CardContent className="p-8 flex flex-col flex-1">
                       <div className="flex-1">
                         <motion.h3 
-                          className="text-xl font-bold text-white mb-4 group-hover:text-primary transition-colors duration-500"
+                          className="text-xl font-bold text-white mb-4 group-hover:text-primary transition-colors duration-1000"
                           whileHover={{ x: 3 }}
-                          transition={{ duration: 0.5, ease: "easeInOut" }}
+                          transition={{ duration: 0.7, ease: "easeInOut" }}
                           initial={{ x: 0 }}
                           animate={{ x: 0 }}
                         >
                           {project.title}
                         </motion.h3>
                         <motion.p 
-                          className="text-gray-300 mb-6 leading-relaxed px-2 group-hover:text-gray-200 transition-colors duration-500"
+                          className="text-gray-300 mb-6 leading-relaxed px-2 group-hover:text-gray-200 transition-colors duration-1000"
                           whileHover={{ x: 3 }}
-                          transition={{ duration: 0.5, ease: "easeInOut" }}
+                          transition={{ duration: 0.7, ease: "easeInOut" }}
                           initial={{ x: 0 }}
                           animate={{ x: 0 }}
                         >
@@ -132,13 +132,13 @@ export default function ProjectsSection() {
                               key={techIndex}
                               whileHover={{ scale: 1.08, y: -2 }}
                               whileTap={{ scale: 0.98 }}
-                              transition={{ duration: 0.4, ease: "easeInOut" }}
+                              transition={{ duration: 0.6, ease: "easeInOut" }}
                               initial={{ scale: 1, y: 0 }}
                               animate={{ scale: 1, y: 0 }}
                             >
                               <Badge 
                                 variant="outline"
-                                className="text-white bg-gray-800 border-gray-600 hover:bg-orange-600 hover:text-white hover:border-orange-500 transition-all duration-300 focus:bg-orange-600 focus:text-white focus:ring-2 focus:ring-orange-400 focus:ring-opacity-50 cursor-pointer shadow-md hover:shadow-lg"
+                                className="text-white bg-gray-800 border-gray-600 hover:bg-orange-600 hover:text-white hover:border-orange-500 transition-all duration-1000 focus:bg-orange-600 focus:text-white focus:ring-2 focus:ring-orange-400 focus:ring-opacity-50 cursor-pointer shadow-md hover:shadow-lg"
                               >
                                 {tech}
                               </Badge>
@@ -156,16 +156,16 @@ export default function ProjectsSection() {
                             className="w-full group/btn"
                             whileHover={{ scale: 1.03, y: -1 }}
                             whileTap={{ scale: 0.98 }}
-                            transition={{ duration: 0.4, ease: "easeInOut" }}
+                            transition={{ duration: 0.6, ease: "easeInOut" }}
                             initial={{ scale: 1, y: 0 }}
                             animate={{ scale: 1, y: 0 }}
                           >
                             <Button 
                               variant="outline" 
                               size="sm"
-                              className="w-full bg-gray-800 text-white cursor-pointer border-0 transition-all duration-300 hover:bg-orange-600 hover:text-white focus:bg-orange-600 focus:text-white focus:ring-2 focus:ring-orange-400 focus:ring-opacity-50 shadow-lg hover:shadow-xl"
+                              className="w-full bg-gray-800 text-white cursor-pointer border-0 transition-all duration-1000 hover:bg-orange-600 hover:text-white focus:bg-orange-600 focus:text-white focus:ring-2 focus:ring-orange-400 focus:ring-opacity-50 shadow-lg hover:shadow-xl"
                             >
-                              <Github className="w-4 h-4 mr-2 transition-transform duration-300 group-hover/btn:scale-110" />
+                              <Github className="w-4 h-4 mr-2 transition-transform duration-1000 group-hover/btn:scale-110" />
                               Code
                             </Button>
                           </motion.a>
@@ -181,17 +181,17 @@ export default function ProjectsSection() {
                             className="w-full group/btn"
                             whileHover={{ scale: 1.03, y: -1 }}
                             whileTap={{ scale: 0.98 }}
-                            transition={{ duration: 0.4, ease: "easeInOut" }}
+                            transition={{ duration: 0.6, ease: "easeInOut" }}
                             initial={{ scale: 1, y: 0 }}
                             animate={{ scale: 1, y: 0 }}
                           >
                             <Button
                               asChild
                               size="sm"
-                              className="w-full bg-gradient-to-r from-gray-600 to-gray-700 hover:from-orange-600 hover:to-orange-700 text-white transition-all duration-300 hover:shadow-xl focus:from-orange-600 focus:to-orange-700 focus:ring-2 focus:ring-orange-400 focus:ring-opacity-50 shadow-lg"
+                              className="w-full bg-gradient-to-r from-gray-600 to-gray-700 hover:from-orange-600 hover:to-orange-700 text-white transition-all duration-1000 hover:shadow-xl focus:from-orange-600 focus:to-orange-700 focus:ring-2 focus:ring-orange-400 focus:ring-opacity-50 shadow-lg"
                             >
                               <span className="flex items-center justify-center w-full h-full">
-                                <ExternalLink className="w-4 h-4 mr-2 transition-transform duration-300 group-hover/btn:scale-110" />
+                                <ExternalLink className="w-4 h-4 mr-2 transition-transform duration-1000 group-hover/btn:scale-110" />
                                 Live Demo
                               </span>
                             </Button>

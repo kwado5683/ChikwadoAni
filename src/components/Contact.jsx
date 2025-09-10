@@ -122,11 +122,11 @@ export default function ContactSection() {
                     initial={{ opacity: 0, x: -20 }}
                     whileInView={{ opacity: 1, x: 0 }}
                     viewport={{ once: true }}
-                    transition={{ duration: 0.6, delay: index * 0.1 }}
+                    transition={{ duration: 0.8, delay: index * 0.1 }}
                     className="flex items-center gap-4"
                   >
-                    <div className="w-12 h-12 neumorphic rounded-xl flex items-center justify-center hover:bg-orange-600/20 transition-all duration-300 group">
-                      <info.icon className="w-5 h-5 text-primary group-hover:text-orange-400 transition-colors duration-300" />
+                    <div className="w-12 h-12 neumorphic rounded-xl flex items-center justify-center hover:bg-orange-600/20 transition-all duration-500 group">
+                      <info.icon className="w-5 h-5 text-primary group-hover:text-orange-400 transition-colors duration-500" />
                     </div>
                     <div>
                       <p className="text-sm font-medium text-gray-400">{info.label}</p>
@@ -152,9 +152,9 @@ export default function ContactSection() {
                     <a
                       key={index}
                       href={social.href}
-                      className={`w-10 h-10 glassmorphic rounded-lg flex items-center justify-center text-white hover:bg-orange-600/20 transition-all duration-300 hover:glassmorphic-hover hover:scale-105`}
+                      className={`w-10 h-10 glassmorphic rounded-lg flex items-center justify-center text-white hover:bg-orange-600/20 transition-all duration-500 hover:glassmorphic-hover hover:scale-105`}
                     >
-                      <social.icon className="w-5 h-5 group-hover:text-orange-400 transition-colors duration-300" />
+                      <social.icon className="w-5 h-5 group-hover:text-orange-400 transition-colors duration-500" />
                     </a>
                   ))}
                 </div>
@@ -220,7 +220,7 @@ export default function ContactSection() {
                     <Button 
                       type="submit"
                       size="lg"
-                      className="w-full text-white py-3 cursor-pointer transition-all duration-300 rounded-lg"
+                      className="w-full text-white py-3 cursor-pointer transition-all duration-500 rounded-lg"
                       style={{
                         background: 'linear-gradient(to right, var(--primary), var(--secondary))',
                         boxShadow: 'inset 2px 2px 5px rgba(255, 255, 255, 0.05), inset -2px -2px 5px rgba(0, 0, 0, 0.3), 0 4px 16px rgba(0, 0, 0, 0.4)'
