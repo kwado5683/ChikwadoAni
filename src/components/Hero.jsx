@@ -244,7 +244,7 @@ export default function HeroSection() {
                 </div>
              </div>
                          <p className="text-lg md:text-xl text-gray-300 max-w-2xl mx-auto leading-relaxed">
-               Transitioning from <span className="font-semibold text-primary">Occupational Health & Safety </span> 
+               Transitioned from <span className="font-semibold text-primary">Occupational Health & Safety </span> 
                to <span className="font-semibold text-secondary">Software Development</span>, 
                blending precision and innovation in every project.
              </p>
