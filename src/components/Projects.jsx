@@ -10,17 +10,6 @@ import { Button } from '@/components/Button';
 export default function ProjectsSection() {
   const projects = [
     {
-        title: "Testimonial and Reference Board",
-        description: "A full-stack testimonial and reference board, built with Next.js (App Router) and PostgreSQL, it features dynamic data fetching, visitors can leave feedback directly, with submissions stored and displayed in real-time. If you manage to visit, please leave me a comment.",
-        image: "/kwado.jpeg",
-        technologies: ["React", "Node.js", "PostgreSQL", "Next.js"],
-        category: "Full Stack",
-        links: {
-          github: "https://github.com/kwado5683/week8-portfolioWebSite",
-          live: "https://week8-portfolio-web-site.vercel.app/"
-        }
-      },
-    {
       title: "Safety Management System",
       description: "A comprehensive web application for managing workplace safety compliance, incident tracking, and risk assessment workflows.",
       image: "/sms.jpg",
@@ -31,6 +20,18 @@ export default function ProjectsSection() {
         live: "https://safety-mgt.vercel.app"
       }
     },
+    {
+        title: "Testimonial and Reference Board",
+        description: "A full-stack testimonial and reference board, built with Next.js (App Router) and PostgreSQL, it features dynamic data fetching, visitors can leave feedback directly, with submissions stored and displayed in real-time. If you manage to visit, please leave me a comment.",
+        image: "/kwado.jpeg",
+        technologies: ["React", "Node.js", "PostgreSQL", "Next.js"],
+        category: "Full Stack",
+        links: {
+          github: "https://github.com/kwado5683/week8-portfolioWebSite",
+          live: "https://week8-portfolio-web-site.vercel.app/"
+        }
+      },
+    
     {
       title: "Zayn AI-agent",
       description: "Zayn is an AI chatbot project built with Next.js, @ai-sdk/react, and Tailwind CSS, featuring real-time conversations powered by modern AI tools. ",
