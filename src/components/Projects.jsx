@@ -11,13 +11,13 @@ export default function ProjectsSection() {
   const projects = [
     {
       title: "Safety Management System",
-      description: "A comprehensive web application for managing workplace safety compliance, incident tracking, and risk assessment workflows.",
+      description: `Safety and Compliance Report (SCAR) is a bespoke web app for managing workplace safety and compliance. It streamlines incident tracking, risk assessments, and corrective actions, all in one place. SCAR also integrates with Zayn, our AI chatbot assistant, to provide real-time guidance and automated safety insights.`,
       image: "/sms.jpg",
       technologies: ["React", "Node.js", "PostgreSQL", "Next.js"],
       category: "Full Stack",
       links: {
         github: "https://github.com/kwado5683/Safety",
-        live: "https://safety-mgt.vercel.app"
+        live: "https://safety-mgt.vercel.app/"
       }
     },
     {
@@ -33,8 +33,8 @@ export default function ProjectsSection() {
       },
     
     {
-      title: "Zayn AI-agent",
-      description: "Zayn is an AI chatbot project built with Next.js, @ai-sdk/react, and Tailwind CSS, featuring real-time conversations powered by modern AI tools. ",
+      title: "Zayn AI-Chatbot",
+      description: "Zayn is an AI chatbot assistant built for organizations that need instant, tailored support. It provides real-time guidance, generates templates and corrective measures, and adapts to each organization’s data and policies. Zayn can also integrate with SCAR to deliver intelligent, in-app safety insights and recommendations.",
       image: "/zayn.jpg",
       technologies: ["React", "Next.js", "Tailwind CSS", "@ai-sdk/react"],
       category: "Frontend",
@@ -123,9 +123,13 @@ export default function ProjectsSection() {
                           transition={{ duration: 0.7, ease: "easeInOut" }}
                           initial={{ x: 0 }}
                           animate={{ x: 0 }}
-                        >
-                          {project.description}
-                        </motion.p>
+                          dangerouslySetInnerHTML={{
+                            __html: project.description.replace(
+                              /Zayn/g, 
+                              '<span style="font-weight: bold; color: #2563eb;">Zayn</span>'
+                            )
+                          }}
+                        />
                         
                         <div className="flex flex-wrap gap-3 mb-8 px-2">
                           {project.technologies.map((tech, techIndex) => (
