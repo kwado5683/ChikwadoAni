@@ -257,7 +257,7 @@ export default function HeroSection() {
             transition={{ duration: 0.8, delay: 0.6 }}
             className="flex flex-col sm:flex-row gap-4 justify-center mb-12"
           >
-            <a href="/Chikwado-Valentine-Ani.pdf" download className="flex-1 sm:flex-none">
+            {/* <a href="/Chikwado-Valentine-Ani.pdf" download className="flex-1 sm:flex-none">
                               <Button 
                   size="lg" 
                   className="w-full bg-gradient-to-r from-primary to-secondary hover:from-orange-600 hover:to-orange-700 
@@ -269,7 +269,7 @@ export default function HeroSection() {
                   <Download className="w-5 h-5 mr-2" />
                   Download Resume
                 </Button>
-            </a>
+            </a> */}
                         <Button 
               size="lg" 
               onClick={scrollToAbout}

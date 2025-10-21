@@ -42,6 +42,17 @@ export default function ProjectsSection() {
         github: "https://github.com/kwado5683/Zayn-Ai-Agent",
         live: "https://zayn-ai-agent.vercel.app/"
       }
+    },
+    {
+      title: "Scar Landing Page",
+      description: "A responsive landing page introducing SCAR, a bespoke safety management platform. It highlights SCAR’s core features and visuals while capturing early-access requests through an integrated contact form.",
+      image: "/scar-landing-page.png",
+      technologies: ["React", "Node.js", "PostgreSQL", "Next.js"],
+      category: "Full Stack",
+      links: {
+        github: "https://github.com/kwado5683/scar-landing-page",
+        live: "https://scar-landing-page.vercel.app/"
+      }
     }
   ];
 
@@ -124,10 +135,15 @@ export default function ProjectsSection() {
                           initial={{ x: 0 }}
                           animate={{ x: 0 }}
                           dangerouslySetInnerHTML={{
-                            __html: project.description.replace(
-                              /Zayn/g, 
-                              '<span style="font-weight: bold; color: #2563eb;">Zayn</span>'
-                            )
+                            __html: project.description
+                              .replace(
+                                /Zayn/g, 
+                                '<span style="font-weight: bold; color: #2563eb;">Zayn</span>'
+                              )
+                              .replace(
+                                /SCAR/g, 
+                                '<span style="font-weight: bold; color: #2563eb;">SCAR</span>'
+                              )
                           }}
                         />
                         
