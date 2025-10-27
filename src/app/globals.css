@@ -107,6 +107,15 @@ body {
   box-shadow: var(--glow-secondary);
 }
 
+/* 3D Perspective utilities */
+.perspective-1000 {
+  perspective: 1000px;
+}
+
+.perspective-500 {
+  perspective: 500px;
+}
+
 /* Smooth transitions */
 * {
   transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);

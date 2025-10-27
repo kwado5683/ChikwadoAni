@@ -93,15 +93,45 @@ export default function ProjectsSection() {
                   transition={{ duration: 0.8, delay: index * 0.2 }}
                 >
                   <Card className="h-full neumorphic hover:neumorphic-hover transition-all duration-1000 ease-out group overflow-hidden border-0 flex flex-col hover:scale-[1.03] hover:shadow-2xl hover:-translate-y-2">
-                    <div className="relative overflow-hidden p-4">
+                    <div className="relative overflow-hidden p-4 perspective-1000">
                       <motion.img 
                         src={project.image} 
                         alt={project.title}
-                        className="w-full h-48 object-cover rounded-lg"
-                        whileHover={{ scale: 1.08, rotateY: 3 }}
-                        transition={{ duration: 0.8, ease: "easeInOut" }}
-                        initial={{ scale: 1, rotateY: 0 }}
-                        animate={{ scale: 1, rotateY: 0 }}
+                        className="w-full h-48 sm:h-52 md:h-56 lg:h-60 object-cover rounded-lg shadow-lg hover:shadow-2xl transition-all duration-1000 ease-out"
+                        whileHover={{ 
+                          scale: 1.05, 
+                          rotateY: 5, 
+                          rotateX: 2,
+                          z: 20
+                        }}
+                        whileTap={{ 
+                          scale: 0.98, 
+                          rotateY: 2, 
+                          rotateX: 1 
+                        }}
+                        transition={{ 
+                          duration: 0.8, 
+                          ease: "easeInOut",
+                          type: "spring",
+                          stiffness: 100,
+                          damping: 15
+                        }}
+                        initial={{ 
+                          scale: 1, 
+                          rotateY: 0, 
+                          rotateX: 0,
+                          z: 0 
+                        }}
+                        animate={{ 
+                          scale: 1, 
+                          rotateY: 0, 
+                          rotateX: 0,
+                          z: 0 
+                        }}
+                        style={{
+                          transformStyle: "preserve-3d",
+                          backfaceVisibility: "hidden"
+                        }}
                       />
                                               <motion.div 
                           className="absolute top-6 left-6"
@@ -181,17 +211,17 @@ export default function ProjectsSection() {
                             initial={{ scale: 1, y: 0 }}
                             animate={{ scale: 1, y: 0 }}
                           >
-                            <Button 
+                            {/* <Button 
                               variant="outline" 
                               size="sm"
                               className="w-full bg-gray-800 text-white cursor-pointer border-0 transition-all duration-1000 hover:bg-orange-600 hover:text-white focus:bg-orange-600 focus:text-white focus:ring-2 focus:ring-orange-400 focus:ring-opacity-50 shadow-lg hover:shadow-xl"
                             >
                               <Github className="w-4 h-4 mr-2 transition-transform duration-1000 group-hover/btn:scale-110" />
                               Code
-                            </Button>
+                            </Button> */}
                           </motion.a>
                         ) : (
-                          <div className="w-full h-10"></div> // Placeholder for consistent spacing
+                          <div className="w-full h-10"></div>
                         )}
                         
                         {project.links.live ? (
@@ -207,18 +237,15 @@ export default function ProjectsSection() {
                             animate={{ scale: 1, y: 0 }}
                           >
                             <Button
-                              asChild
                               size="sm"
-                              className="w-full bg-gradient-to-r from-gray-600 to-gray-700 hover:from-orange-600 hover:to-orange-700 text-white transition-all duration-1000 hover:shadow-xl focus:from-orange-600 focus:to-orange-700 focus:ring-2 focus:ring-orange-400 focus:ring-opacity-50 shadow-lg"
+                              className="w-full bg-gradient-to-r from-orange-600 to-orange-700 hover:from-green-600 hover:to-green-700 text-white transition-all duration-1000 hover:shadow-xl focus:from-orange-600 focus:to-orange-700 focus:ring-2 focus:ring-orange-400 focus:ring-opacity-50 shadow-lg flex items-center justify-center"
                             >
-                              <span className="flex items-center justify-center w-full h-full">
-                                <ExternalLink className="w-4 h-4 mr-2 transition-transform duration-1000 group-hover/btn:scale-110" />
-                                Live Demo
-                              </span>
+                              <ExternalLink className="w-4 h-4 mr-2 transition-transform duration-1000 group-hover/btn:scale-110" />
+                              Live Demo
                             </Button>
                           </motion.a>
                         ) : (
-                          <div className="w-full h-10"></div> // Placeholder for consistent spacing
+                          <div className="w-full h-10"></div>
                         )}
                       </div>
                     </CardContent>
