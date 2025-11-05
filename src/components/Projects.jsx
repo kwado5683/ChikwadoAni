@@ -16,7 +16,7 @@ export default function ProjectsSection() {
       technologies: ["React", "Node.js", "PostgreSQL", "Next.js"],
       category: "Full Stack",
       links: {
-        github: "https://github.com/kwado5683/Safety",
+        github: " ",
         live: "https://safety-mgt.vercel.app/"
       }
     },
@@ -52,6 +52,17 @@ export default function ProjectsSection() {
       links: {
         github: "https://github.com/kwado5683/scar-landing-page",
         live: "https://scar-landing-page.vercel.app/"
+      }
+    },
+    {
+      title: "Safe Start",
+      description: "An online training platform built to help individuals and organisations meet mandatory health and safety requirements across the UK.",
+      image: "/safestart.jpg",
+      technologies: ["React", "Node.js", "PostgreSQL", "Next.js"],
+      category: "Full Stack",
+      links: {
+        github: "https://github.com/kwado5683/scar-landing-page",
+        live: "https://safe-start.vercel.app/"
       }
     }
   ];
@@ -199,7 +210,7 @@ export default function ProjectsSection() {
                       </div>
                       
                       <div className="grid grid-cols-2 gap-3 px-2 mt-auto">
-                        {project.links.github ? (
+                        {/* {project.links.github ? (
                           <motion.a 
                             href={project.links.github}
                             target="_blank"
@@ -211,17 +222,29 @@ export default function ProjectsSection() {
                             initial={{ scale: 1, y: 0 }}
                             animate={{ scale: 1, y: 0 }}
                           >
-                            {/* <Button 
+                            <Button 
                               variant="outline" 
                               size="sm"
                               className="w-full bg-gray-800 text-white cursor-pointer border-0 transition-all duration-1000 hover:bg-orange-600 hover:text-white focus:bg-orange-600 focus:text-white focus:ring-2 focus:ring-orange-400 focus:ring-opacity-50 shadow-lg hover:shadow-xl"
                             >
                               <Github className="w-4 h-4 mr-2 transition-transform duration-1000 group-hover/btn:scale-110" />
                               Code
-                            </Button> */}
+                            </Button>
                           </motion.a>
                         ) : (
                           <div className="w-full h-10"></div>
+                        )} */}
+                        
+                        {project.title === "Safe Start" && (
+                          <motion.p
+                            className="col-span-2 text-sm text-orange-400 mb-2 font-medium text-center"
+                            initial={{ opacity: 0 }}
+                            whileInView={{ opacity: 1 }}
+                            viewport={{ once: true }}
+                            transition={{ duration: 0.8, delay: 0.2 }}
+                          >
+                            Currently working on this project
+                          </motion.p>
                         )}
                         
                         {project.links.live ? (
@@ -229,7 +252,7 @@ export default function ProjectsSection() {
                             href={project.links.live}
                             target="_blank"
                             rel="noopener noreferrer"
-                            className="w-full group/btn"
+                            className="w-full col-span-2 group/btn"
                             whileHover={{ scale: 1.03, y: -1 }}
                             whileTap={{ scale: 0.98 }}
                             transition={{ duration: 0.6, ease: "easeInOut" }}
