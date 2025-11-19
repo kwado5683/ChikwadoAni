@@ -55,6 +55,17 @@ export default function ProjectsSection() {
       }
     },
     {
+      title: "Shift Management System",
+      description: "A full-stack shift management web application built for bank/support worker scheduling. The app streamlines the shift assignment process by replacing chaotic email threads with a clean, mobile-first interface where admins can post shifts and workers can request ones they're eligible for based on role and gender requirements.",
+      image: "/shift-management.png",
+      technologies: ["React", "Node.js", "PostgreSQL", "Next.js", "Tailwind CSS","Resend"],
+      category: "Full Stack",
+      links: {
+        github: "https://github.com/kwado5683/Newton-Shift-Manager",
+        live: "https://newton-shift-manager.vercel.app/"
+      }
+    },
+    {
       title: "Safe Start",
       description: "An online training platform built to help individuals and organisations meet mandatory health and safety requirements across the UK.",
       image: "/safestart.jpg",
