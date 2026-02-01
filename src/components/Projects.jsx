@@ -62,7 +62,7 @@ export default function ProjectsSection() {
       category: "Full Stack",
       links: {
         github: "https://github.com/kwado5683/Newton-Shift-Manager",
-        live: "https://newton-shift-manager.vercel.app/"
+        live: "https://zaynshift.vercel.app/"
       }
     },
     {
