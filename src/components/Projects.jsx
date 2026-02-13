@@ -73,7 +73,7 @@ export default function ProjectsSection() {
       category: "Full Stack",
       links: {
         github: "https://github.com/kwado5683/scar-landing-page",
-        live: "https://safe-start.vercel.app/"
+        live: "https://safestartlearning.co.uk/"
       }
     }
   ];
