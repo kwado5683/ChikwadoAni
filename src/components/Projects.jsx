@@ -20,29 +20,29 @@ export default function ProjectsSection() {
         live: "https://safety-mgt.vercel.app/"
       }
     },
-    {
-        title: "Testimonial and Reference Board",
-        description: "A full-stack testimonial and reference board, built with Next.js (App Router) and PostgreSQL, it features dynamic data fetching, visitors can leave feedback directly, with submissions stored and displayed in real-time. If you manage to visit, please leave me a comment.",
-        image: "/kwado.jpeg",
-        technologies: ["React", "Node.js", "PostgreSQL", "Next.js"],
-        category: "Full Stack",
-        links: {
-          github: "https://github.com/kwado5683/week8-portfolioWebSite",
-          live: "https://week8-portfolio-web-site.vercel.app/"
-        }
-      },
+    // {
+    //     title: "Testimonial and Reference Board",
+    //     description: "A full-stack testimonial and reference board, built with Next.js (App Router) and PostgreSQL, it features dynamic data fetching, visitors can leave feedback directly, with submissions stored and displayed in real-time. If you manage to visit, please leave me a comment.",
+    //     image: "/kwado.jpeg",
+    //     technologies: ["React", "Node.js", "PostgreSQL", "Next.js"],
+    //     category: "Full Stack",
+    //     links: {
+    //       github: "https://github.com/kwado5683/week8-portfolioWebSite",
+    //       live: "https://week8-portfolio-web-site.vercel.app/"
+    //     }
+    //   },
     
-    {
-      title: "Zayn AI-Chatbot",
-      description: "Zayn is an AI chatbot assistant built for organizations that need instant, tailored support. It provides real-time guidance, generates templates and corrective measures, and adapts to each organization’s data and policies. Zayn can also integrate with SCAR to deliver intelligent, in-app safety insights and recommendations.",
-      image: "/zayn.jpg",
-      technologies: ["React", "Next.js", "Tailwind CSS", "@ai-sdk/react"],
-      category: "Frontend",
-      links: {
-        github: "https://github.com/kwado5683/Zayn-Ai-Agent",
-        live: "https://zayn-ai-agent.vercel.app/"
-      }
-    },
+    // {
+    //   title: "Zayn AI-Chatbot",
+    //   description: "Zayn is an AI chatbot assistant built for organizations that need instant, tailored support. It provides real-time guidance, generates templates and corrective measures, and adapts to each organization’s data and policies. Zayn can also integrate with SCAR to deliver intelligent, in-app safety insights and recommendations.",
+    //   image: "/zayn.jpg",
+    //   technologies: ["React", "Next.js", "Tailwind CSS", "@ai-sdk/react"],
+    //   category: "Frontend",
+    //   links: {
+    //     github: "https://github.com/kwado5683/Zayn-Ai-Agent",
+    //     live: "https://zayn-ai-agent.vercel.app/"
+    //   }
+    // },
     {
       title: "Scar Landing Page",
       description: "A responsive landing page introducing SCAR, a bespoke safety management platform. It highlights SCAR’s core features and visuals while capturing early-access requests through an integrated contact form.",
