@@ -12,8 +12,36 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata = {
-  title: "Chikwado Val Ani",
-  description: "My PortFolio",
+  metadataBase: new URL("https://www.chikwadoval.com"),
+  title: "Chikwado Valentine Ani | Full-Stack Software Engineer",
+  description:
+    "Full-stack software engineer and health & safety expert. Portfolio of Chikwado Valentine Ani — building practical web apps with React, Next.js, and Node.js.",
+  keywords: [
+    "Chikwado Valentine Ani",
+    "Full-Stack Software Engineer",
+    "React",
+    "Next.js",
+    "Node.js",
+    "Portfolio",
+  ],
+  robots: {
+    index: true,
+    follow: true,
+  },
+  openGraph: {
+    title: "Chikwado Valentine Ani | Full-Stack Software Engineer",
+    description:
+      "Full-stack software engineer and health & safety expert. Portfolio of Chikwado Valentine Ani — building practical web apps with React, Next.js, and Node.js.",
+    url: "/",
+    siteName: "Chikwado Valentine Ani",
+    type: "website",
+  },
+  twitter: {
+    card: "summary",
+    title: "Chikwado Valentine Ani | Full-Stack Software Engineer",
+    description:
+      "Full-stack software engineer and health & safety expert. Portfolio of Chikwado Valentine Ani — building practical web apps with React, Next.js, and Node.js.",
+  },
 };
 
 export default function RootLayout({ children }) {
